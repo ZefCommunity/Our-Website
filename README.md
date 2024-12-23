@@ -1,8 +1,12 @@
-# React + Vite
+# This is a React project created with Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Styling will be done in TailwindCSS which has already been installed
 
-Currently, two official plugins are available:
+## Below are the depencies in the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. React Icons - All icons in the website will be from the React Icons.
+2. React Router Dom - To manage all pages in the website.
+3. React Swiper - To manage a Swiper that will be in the Hero section.
+4. React Loader - This is to manage the loader.
+
+## Any dependency that wil be added will be listed here and where it will be used. 
