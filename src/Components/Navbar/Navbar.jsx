@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import zeflogo from "../../assets/zeflogo.png"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,6 +95,54 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+            <li className="border-t md:border-none">
+              <a
+                href="#"
+                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              >
+                Home
+              </a>
+            </li>
+            <li className="border-t md:border-none">
+              <a
+                href="#"
+                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              >
+                About
+              </a>
+            </li>
+            <li className="border-t md:border-none">
+              <Link
+                to="/latestcauses"
+                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              >
+                Latest Causes
+              </Link>
+            </li>
+            <li className="border-t md:border-none">
+              <Link
+                to="/events"
+                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              >
+                Social Events
+              </Link>
+            </li>
+            <li className="border-t md:border-none">
+              <a
+                href="#"
+                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              >
+                Blog
+              </a>
+            </li>
+            <li className="border-t md:border-none">
+              <a
+                href="#"
+                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
 
           <div className="hidden md:flex">
