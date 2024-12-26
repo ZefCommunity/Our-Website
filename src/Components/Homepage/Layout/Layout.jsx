@@ -12,10 +12,7 @@ import Seventhsection from '../Herosection/Seventhsection'
 import Eightsection from '../Herosection/Eightsection'
 import Ninthsection from '../Herosection/Ninthsection'
 import Tenthsection from '../Herosection/Tenthsection'
-import React from "react";
-import Navbar from "../../Navbar/Navbar";
-import Footer from "../../Footer/Footer";
-import { Outlet } from "react-router-dom";
+
 
 const Layout = () => {
   return (

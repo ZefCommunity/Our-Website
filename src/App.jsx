@@ -11,12 +11,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          {/* <Route index element={<h1>Welcome to the Homepage</h1>} />
-          <Route path="about" element={<h1>About Us</h1>} />
-          <Route path="contact" element={<h1>Contact Us</h1>} /> */}
+        <Route path="/" index element={<Layout />}/>
           <Route path="/latestcauses" element={<LatestCauses />} />
-          <Route path="/events" element={<SocialEvents />} />
+          <Route path="/events" element={<SocialEvents />} >
         </Route>
       </Routes>
     </>
