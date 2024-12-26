@@ -6,10 +6,13 @@ import sectionBg from "../assets/images/social-events/section_bg02.png";
 import event1 from "../assets/images/social-events/socialEvents1.png";
 import event2 from "../assets/images/social-events/socialEvents2.png";
 import event3 from "../assets/images/social-events/socialEvents3.png";
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 const SocialEvents = () => {
   return (
     <>
+    <Navbar/>
       <div
         className="bg-cover bg-no-repeat bg-left"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -171,6 +174,8 @@ const SocialEvents = () => {
           </li>
         </ul>
       </section>
+
+      <Footer/>
     </>
   );
 };

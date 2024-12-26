@@ -4,10 +4,13 @@ import heroBg from "../assets/images/backgrounds/hero2.png";
 import cause1 from "../assets/images/latest-causes/case1.png";
 import cause2 from "../assets/images/latest-causes/case2.png";
 import cause3 from "../assets/images/latest-causes/case3.png";
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 const LatestCauses = () => {
   return (
     <>
+    <Navbar/>
       <div className="bg-cover bg-no-repeat bg-left" style={{ backgroundImage: `url(${heroBg})` }}>
         <h1 className="text-5xl font-bold text-center pt-32 pb-24 tracking-wide text-[#072366]">
           Latest Causes
@@ -159,6 +162,8 @@ const LatestCauses = () => {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 };

@@ -80,7 +80,7 @@ const Navbar = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            {["Home", "About", "Latest Causes", "Social Events", "Blog", "Contact"].map((link) => (
+            {/* {["Home", "About", "Latest Causes", "Social Events", "Blog", "Contact"].map((link) => (
               <li key={link} className="border-t md:border-none">
                 <a
                   href="#"
@@ -94,10 +94,10 @@ const Navbar = () => {
                   {link}
                 </a>
               </li>
-            ))}
+            ))} */}
             <li className="border-t md:border-none">
               <a
-                href="#"
+                href="/"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Home
