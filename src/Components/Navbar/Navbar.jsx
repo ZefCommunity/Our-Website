@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar - Hidden on small screens */}
-      <div className="bg-gray-100 border-b text-sm py-3 md:block hidden z-10">
+      <div className=" relative bg-gray-100 border-b text-sm py-3 md:block hidden z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex space-x-4">
             <span>Phone: +99 (0) 101 0000 888</span>
@@ -137,7 +137,7 @@ const Navbar = () => {
             </li>
             <li className="border-t md:border-none">
               <a
-                href="#"
+                href="/contactus"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Contact
