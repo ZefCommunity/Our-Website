@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,16 +19,32 @@ const Navbar = () => {
             <button className="text-gray-700">English ▼</button>
             <button className="text-gray-700">Subscribe Now</button>
             <div className="flex space-x-3">
-              <a href="#" className="text-gray-600 hover:text-gray-900" aria-label="Twitter">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900"
+                aria-label="Twitter"
+              >
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900" aria-label="Facebook">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900"
+                aria-label="Facebook"
+              >
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900" aria-label="LinkedIn">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900"
+                aria-label="LinkedIn"
+              >
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900" aria-label="Google Plus">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900"
+                aria-label="Google Plus"
+              >
                 <i className="fab fa-google-plus-g"></i>
               </a>
             </div>
@@ -47,7 +63,9 @@ const Navbar = () => {
           {/* Hamburger Menu (for mobile) */}
           <button
             aria-label="Toggle Menu"
-            className={`md:hidden text-gray-700 transform transition-transform ${isMenuOpen ? "rotate-45" : ""}`}
+            className={`md:hidden text-gray-700 transform transition-transform ${
+              isMenuOpen ? 'rotate-45' : ''
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -69,48 +87,48 @@ const Navbar = () => {
           {/* Nav Links */}
           <ul
             className={`md:flex md:space-x-6 absolute md:static top-14 left-0 w-full md:w-auto bg-white md:bg-transparent transition-all duration-300 ${
-              isMenuOpen ? "block" : "hidden"
+              isMenuOpen ? 'block' : 'hidden'
             }`}
           >
             <li className="border-t md:border-none">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="border-t md:border-none">
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="border-t md:border-none">
-              <a
-                href="#"
+              <Link
+                to="/LatestCause"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Latest Causes
-              </a>
+              </Link>
             </li>
             <li className="border-t md:border-none">
-              <a
-                href="#"
+              <Link
+                to="/socialEvents"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Social Events
-              </a>
+              </Link>
             </li>
             <li className="border-t md:border-none">
-              <a
-                href="#"
+              <Link
+                to="/blog"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="border-t md:border-none">
               <a
