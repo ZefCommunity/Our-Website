@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
+import zeflogo from '../../assets/zeflogo.png';
 import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('Home'); // State to track active link
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link); // Update the active link
+  };
 
   return (
     <>
       {/* Top Bar - Hidden on small screens */}
-      <div className="bg-gray-100 border-b text-sm py-3 md:block hidden">
+      <div className=" relative bg-gray-100 border-b text-sm py-3 md:block hidden z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
-          {/* Left Side */}
           <div className="flex space-x-4">
             <span>Phone: +99 (0) 101 0000 888</span>
             <span>Email: media@zurfteempowercare.org</span>
           </div>
-
-          {/* Right Side */}
           <div className="flex space-x-4">
             <button className="text-gray-700">English ▼</button>
             <button className="text-gray-700">Subscribe Now</button>
@@ -53,14 +57,16 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-white shadow py-3">
+      <nav className="bg-white shadow py-3 sticky top-0 z-20">
         <div className="container mx-auto flex justify-between items-center px-4">
-          {/* Logo */}
-          <div className="text-2xl font-bold text-blue-900">
-            Charity<span className="text-green-500">.</span>
+          <div className="h-12">
+            <img
+              src={zeflogo}
+              alt="Zurfte Empowercare Foundation Logo"
+              className="h-full object-contain"
+            />
           </div>
 
-          {/* Hamburger Menu (for mobile) */}
           <button
             aria-label="Toggle Menu"
             className={`md:hidden text-gray-700 transform transition-transform ${
@@ -90,6 +96,21 @@ const Navbar = () => {
               isMenuOpen ? 'block' : 'hidden'
             }`}
           >
+            {/* {["Home", "About", "Latest Causes", "Social Events", "Blog", "Contact"].map((link) => (
+              <li key={link} className="border-t md:border-none">
+                <a
+                  href="#"
+                  onClick={() => handleLinkClick(link)}
+                  className={`block py-2 px-4 text-gray-700 transition-colors duration-300 hover:text-[#0ecb7d] ${
+                    activeLink === link
+                      ? "text-[#0ecb7d] relative after:block after:w-full after:h-1 after:bg-[#0ecb7d] after:rounded-full after:animate-slide"
+                      : ""
+                  }`}
+                >
+                  {link}
+                </a>
+              </li>
+            ))} */}
             <li className="border-t md:border-none">
               <Link
                 to="/"
@@ -132,7 +153,7 @@ const Navbar = () => {
             </li>
             <li className="border-t md:border-none">
               <a
-                href="#"
+                href="/contactus"
                 className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
               >
                 Contact
@@ -140,7 +161,6 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Donate Button */}
           <div className="hidden md:flex">
             <a
               href="#"
@@ -151,6 +171,22 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      <style>
+        {`
+          @keyframes slide {
+            0% {
+              transform: scaleX(0);
+            }
+            100% {
+              transform: scaleX(1);
+            }
+          }
+          .animate-slide {
+            animation: slide 0.4s ease-in-out forwards;
+          }
+        `}
+      </style>
     </>
   );
 };
