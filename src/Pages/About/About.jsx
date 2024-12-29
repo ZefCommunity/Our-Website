@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import { FaCog, FaBrain, FaDesktop } from 'react-icons/fa';
 import img1 from '../../assets/img/gallery/about2.png';
 import img2 from '../../assets/img/gallery/about1.png';
-import bgimg from '../../assets/img/gallery/testimonial.png';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import Eightsection from '../../Components/Homepage/Herosection/Eightsection';
+import Tenthsection from '../../Components/Homepage/Herosection/Tenthsection';
 
 function About() {
-  const [activeIndex, setActiveIndex] = useState(null);
   const cards = [
     {
       icon: <FaDesktop className="text-4xl" />,
@@ -32,77 +28,61 @@ function About() {
     },
   ];
 
-  const testimonials = [
-    {
-      id: 1,
-      image: bgimg,
-      name: 'John Doe',
-      role: 'Software Engineer',
-      testimonial:
-        'This service has truly transformed the way we operate. Highly recommend it!',
-    },
-    {
-      id: 2,
-      image: bgimg,
-      name: 'Jane Smith',
-      role: 'Marketing Manager',
-      testimonial:
-        "Exceptional quality and attention to detail. I'm very impressed!",
-    },
-    {
-      id: 3,
-      image: bgimg,
-      name: 'Alice Johnson',
-      role: 'Product Designer',
-      testimonial:
-        'A seamless experience from start to finish. Will use again for sure!',
-    },
-  ];
   return (
     <div>
       <div className="w-[90%] mx-auto">
-        {/* Header */}
-        {/* <div className="flex items-center justify-center h-[300px]">
-          <h2 className="text-5xl font-bold text-blue-950">About Us</h2>
-        </div> */}
-        {/* services */}
         <div>
-          <div className="text-center my-20">
+          <div className="text-center my-10 md:my-20">
             <span className="text-green-500 text-2xl font-semibold">
               What we are doing
             </span>
-            <h2 className="text-5xl font-semibold text-blue-950 w-[600px] mx-auto mt-10">
+            <h2 className="text-2xl md:text-2xl font-semibold text-blue-950 md:w-[600px] mx-auto mt-10">
               We Are In A Mission To Help The Helpless
             </h2>
           </div>
           {/* cards */}
-          <div>
-            <div className="flex justify-center gap-8 bg-gray-100 py-10 px-4">
-              {cards.map((card, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-8 md:px-16">
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                className={`relative h-96 rounded-lg  overflow-hidden shadow-lg ${
+                  index === 1 ? 'bg-green-500 text-white' : 'bg-white group'
+                }`}
+              >
+                {/* Hover Overlay for Left and Right Cards */}
+                {index !== 1 && (
+                  <div className="absolute inset-0 bg-green-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                )}
+
+                {/* Card Content */}
                 <div
-                  key={index}
-                  onMouseEnter={() => setActiveIndex(index)} // Set active card on hover
-                  onMouseLeave={() => setActiveIndex(null)} // Remove active card on mouse leave
-                  className={`rounded-lg p-6 text-center shadow-lg h-[500px] flex flex-col items-center justify-center transition-all duration-300 ${
-                    activeIndex === index
-                      ? 'bg-green-500 text-white'
-                      : 'bg-white text-gray-800'
+                  className={`relative flex items-center justify-center flex-col  z-10 p-6 transition-colors duration-500 ${
+                    index === 1
+                      ? 'text-white'
+                      : 'text-blue-900 group-hover:text-white'
                   }`}
                 >
-                  <div
-                    className={`flex justify-center items-center w-16 h-16 rounded-full mx-auto mb-4 transition-all duration-300 ${
-                      activeIndex === index
-                        ? 'bg-white text-green-500'
-                        : 'bg-green-500 text-white'
-                    }`}
-                  >
-                    <div className="text-2xl ">{card.icon}</div>
+                  {/* Icon */}
+                  <div className="flex justify-center  items-center mb-4">
+                    <div
+                      className={`p-4 rounded-full ${
+                        index === 1 ? 'bg-blue-950' : 'bg-green-100'
+                      }`}
+                    >
+                      {card.icon}
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold mb-3">{card.title}</h3>
-                  <p className="text-sm">{card.description}</p>
+
+                  {/* Title */}
+                  <h4 className="text-xl  font-bold mb-2 mt-10">
+                    {card.title}
+                  </h4>
+
+                  {/* Description */}
+                  <p className="text-sm text-center">{card.description}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
           {/* explore more */}
           <div className="my-32 w-full">
@@ -151,40 +131,10 @@ function About() {
             </div>
           </div>
           {/* Testimonials */}
-          <div className="bg-gray-100 py-10 mb-14 px-4">
-            <h2 className="text-center text-2xl font-bold mb-8">
-              What Our Clients Say
-            </h2>
-            <Swiper
-              pagination={{ clickable: true }}
-              spaceBetween={30}
-              slidesPerView={1}
-              className="max-w-lg mx-auto"
-            >
-              {testimonials.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div className="text-center">
-                    <div className="relative">
-                      <FaQuoteLeft className="absolute left-0 text-green-500 text-3xl" />
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-32 h-32 rounded-full mx-auto"
-                      />
-                      <FaQuoteRight className="absolute right-0 text-green-500 text-3xl" />
-                    </div>
-                    <h3 className="text-xl font-bold mt-6">{item.name}</h3>
-                    <p className="text-sm text-gray-600">{item.role}</p>
-                    <p className="italic text-gray-800 mt-4">
-                      {item.testimonial}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          <Eightsection />
         </div>
       </div>
+      <Tenthsection />
     </div>
   );
 }

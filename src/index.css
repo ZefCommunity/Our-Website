@@ -1,6 +1,39 @@
-@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Sans:300,400,600,700,700i|Montserrat:200,300,400,500,600,700,800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Sans:300,400,600,700,700i|Montserrat:200,300,400,500,600,700,800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh; /* Full screen height */
+  background-color: #f9f9f9; /* Light background */
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 4px solid transparent;
+  border-top: 4px solid #3498db; /* Border color */
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite; /* Rotating animation */
+}
+
+.text {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: #07012c; /* Text color */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

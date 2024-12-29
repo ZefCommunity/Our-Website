@@ -4,16 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('Home'); // State to track active link
 
-  const handleLinkClick = (link) => {
-    setActiveLink(link); // Update the active link
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
   };
 
   return (
     <>
       {/* Top Bar - Hidden on small screens */}
-      <div className=" relative bg-gray-100 border-b text-sm py-3 md:block hidden z-10">
+      <div className="relative bg-gray-100 border-b text-sm py-3 md:block hidden z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex space-x-4">
             <span>Phone: +99 (0) 101 0000 888</span>
@@ -96,25 +95,11 @@ const Navbar = () => {
               isMenuOpen ? 'block' : 'hidden'
             }`}
           >
-            {/* {["Home", "About", "Latest Causes", "Social Events", "Blog", "Contact"].map((link) => (
-              <li key={link} className="border-t md:border-none">
-                <a
-                  href="#"
-                  onClick={() => handleLinkClick(link)}
-                  className={`block py-2 px-4 text-gray-700 transition-colors duration-300 hover:text-[#0ecb7d] ${
-                    activeLink === link
-                      ? "text-[#0ecb7d] relative after:block after:w-full after:h-1 after:bg-[#0ecb7d] after:rounded-full after:animate-slide"
-                      : ""
-                  }`}
-                >
-                  {link}
-                </a>
-              </li>
-            ))} */}
             <li className="border-t md:border-none">
               <Link
                 to="/"
-                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+                className="block py-2 font-semibold px-4 text-gray-700 hover:text-[#0ecb7d]"
+                onClick={handleLinkClick}
               >
                 Home
               </Link>
@@ -122,7 +107,8 @@ const Navbar = () => {
             <li className="border-t md:border-none">
               <Link
                 to="/about"
-                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+                className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+                onClick={handleLinkClick}
               >
                 About
               </Link>
@@ -130,7 +116,8 @@ const Navbar = () => {
             <li className="border-t md:border-none">
               <Link
                 to="/LatestCause"
-                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+                className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+                onClick={handleLinkClick}
               >
                 Latest Causes
               </Link>
@@ -138,7 +125,8 @@ const Navbar = () => {
             <li className="border-t md:border-none">
               <Link
                 to="/socialEvents"
-                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+                className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+                onClick={handleLinkClick}
               >
                 Social Events
               </Link>
@@ -146,47 +134,33 @@ const Navbar = () => {
             <li className="border-t md:border-none">
               <Link
                 to="/blog"
-                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+                className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+                onClick={handleLinkClick}
               >
                 Blog
               </Link>
             </li>
             <li className="border-t md:border-none">
-              <a
-                href="/contactus"
-                className="block py-2 px-4 text-gray-700 hover:text-[#0ecb7d]"
+              <Link
+                to="/contact"
+                className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+                onClick={handleLinkClick}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="hidden md:flex">
             <a
               href="#"
-              className="bg-[#0ecb7d] text-white px-4 py-2 rounded transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#0ecb7d]/80"
+              className="bg-green-500 font-semibold text-white px-4 py-2 rounded transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-green-600"
             >
               Donate
             </a>
           </div>
         </div>
       </nav>
-
-      <style>
-        {`
-          @keyframes slide {
-            0% {
-              transform: scaleX(0);
-            }
-            100% {
-              transform: scaleX(1);
-            }
-          }
-          .animate-slide {
-            animation: slide 0.4s ease-in-out forwards;
-          }
-        `}
-      </style>
     </>
   );
 };

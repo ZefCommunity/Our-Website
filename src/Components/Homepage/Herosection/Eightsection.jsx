@@ -1,46 +1,73 @@
-import React from "react";
-import eight1 from "../../../assets/eight1.png"
+import React from 'react';
+import bgimg from '../../../assets/eight1.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
 const Eightsection = () => {
+  const testimonials = [
+    {
+      id: 1,
+      image: bgimg,
+      name: 'John Doe',
+      role: 'Software Engineer',
+      testimonial:
+        'This service has truly transformed the way we operate. Highly recommend it!',
+    },
+    {
+      id: 2,
+      image: bgimg,
+      name: 'Jane Smith',
+      role: 'Marketing Manager',
+      testimonial:
+        "Exceptional quality and attention to detail. I'm very impressed!",
+    },
+    {
+      id: 3,
+      image: bgimg,
+      name: 'Alice Johnson',
+      role: 'Product Designer',
+      testimonial:
+        'A seamless experience from start to finish. Will use again for sure!',
+    },
+  ];
+
   return (
-    <div className="py-16 bg-gray-50 flex flex-col items-center text-center">
-      {/* Profile Image */}
-      <div className="w-28 h-28 rounded-full overflow-hidden  mb-4">
-        <img
-          src={eight1} // Replace with your actual image URL
-          alt="Margaret Lawson"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-     {/* Name and Role */}
-     <h3 className="text-xl font-semibold text-blue-900">Margaret Lawson</h3>
-      <p className="text-gray-500 text-base">Creative Director</p>
-
-      {/* Quote */}
-      <div className="relative mt-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-8 h-8 text-green-500"
-          viewBox="0 0 16 16"
-        >
-          <path d="M6.854 3.1a.5.5 0 0 0-.708 0L2.1 7.146a.5.5 0 0 0 0 .708L6.146 11.9a.5.5 0 0 0 .708-.708L3.207 7.5 6.854 3.854a.5.5 0 0 0 0-.707zm6.292 0a.5.5 0 0 0-.708 0L8.1 7.146a.5.5 0 0 0 0 .708L12.146 11.9a.5.5 0 0 0 .708-.708L9.207 7.5l3.647-3.647a.5.5 0 0 0 0-.707z" />
-        </svg>
-        <p className="text-gray-600 italic max-w-2xl mx-auto text-lg">
-          “I am at an age where I just want to be fit and healthy; our bodies
-          are our responsibility! So start caring for your body, and it will
-          care for you. Eat clean; it will care for you and workout hard.”
-        </p>
-      </div>
-
-      {/* Pagination */}
-      <div className="mt-8 flex space-x-2">
-        <span className="w-4 h-4 bg-green-500 rounded-full"></span>
-        <span className="w-4 h-4 bg-gray-300 rounded-full"></span>
-        <span className="w-4 h-4 bg-gray-300 rounded-full"></span>
-      </div>
+    <div className="bg-gray-100 py-10 mb-14 px-4">
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation={true}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        className="max-w-lg mx-auto"
+      >
+        {testimonials.map((item) => (
+          <SwiperSlide key={item.id}>
+            <div className="text-center shadow-lg">
+              <div className="relative">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-32 h-32 rounded-full mx-auto"
+                />
+              </div>
+              <h3 className="text-xl  mt-6 font-semibold text-blue-900">
+                {item.name}
+              </h3>
+              <p className="text-sm text-gray-600">{item.role}</p>
+              <p className="text-gray-600 italic max-w-2xl mx-auto text-lg">
+                {item.testimonial}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-
   );
 };
 

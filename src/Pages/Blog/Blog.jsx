@@ -77,7 +77,7 @@ function Blog() {
         </div>
 
         {/* Body */}
-        <div className="w-[90%] mx-auto flex justify-between">
+        <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between">
           <div>
             {blogs.map((blog, index) => (
               <div
@@ -104,13 +104,13 @@ function Blog() {
                 </div>
                 <div className="flex flex-col gap-5">
                   <Link
-                    to={`/blog/${blog.id}`}
-                    className="text-3xl font-semibold text-blue-950 hover:text-green600 px-2"
+                    to="/blogDetail"
+                    className="text-3xl font-semibold hover:text-green-500 text-blue-950 hover:text-green600 px-2"
                   >
                     {' '}
                     {blog.title}{' '}
                   </Link>
-                  <p className="px-4 w-[700px]"> {blog.content} </p>
+                  <p className="px-4 md:w-[700px]"> {blog.content} </p>
                 </div>
                 <div className="flex px-4 text-gray-600">
                   <div className="flex items-center gap-1 ">
@@ -179,8 +179,8 @@ function Blog() {
               <hr />
 
               <div className="pt-4">
-                {recentPost.map((post) => (
-                  <div className="flex items-center gap-4 mb-5 ">
+                {recentPost.map((post, index) => (
+                  <div key={index} className="flex items-center gap-4 mb-5 ">
                     <div>
                       <img src={post.image} alt="post image" />
                     </div>

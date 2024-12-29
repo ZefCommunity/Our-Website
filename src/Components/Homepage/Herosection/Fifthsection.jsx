@@ -1,44 +1,46 @@
-import React from "react";
-import fifth1 from "../../../assets/fifth1.png";
-import fifth2 from "../../../assets/fifth2.png";
-import fifth3 from "../../../assets/fifth3.png";
+import React from 'react';
+import fifth1 from '../../../assets/fifth1.png';
+import fifth2 from '../../../assets/fifth2.png';
+import fifth3 from '../../../assets/fifth3.png';
 
 const Fifthsection = () => {
   const events = [
     {
-      title: "Donation is Hope",
-      time: "8:30 - 9:30am",
-      date: "18.01.2021",
-      location: "Athens, Greece",
-      image: fifth1, // Use the variable directly
+      title: 'Donation is Hope',
+      time: '8:30 - 9:30am',
+      date: '18.01.2021',
+      location: 'Athens, Greece',
+      image: fifth1,
     },
     {
-      title: "A hand for Children",
-      time: "8:30 - 9:30am",
-      date: "18.01.2021",
-      location: "Athens, Greece",
-      image: fifth2, // Use the variable directly
+      title: 'A hand for Children',
+      time: '8:30 - 9:30am',
+      date: '18.01.2021',
+      location: 'Athens, Greece',
+      image: fifth2,
     },
     {
-      title: "Help for Children",
-      time: "8:30 - 9:30am",
-      date: "18.01.2021",
-      location: "Athens, Greece",
-      image: fifth3, // Use the variable directly
+      title: 'Help for Children',
+      time: '8:30 - 9:30am',
+      date: '18.01.2021',
+      location: 'Athens, Greece',
+      image: fifth3,
     },
   ];
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="w-[90%] md:w-[70%] mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <p className="text-green-500 font-medium">What We Are Doing</p>
-          <h2 className="text-3xl font-bold text-blue-900">
+
+        <div className="text-center my-10 md:my-20">
+          <span className="text-green-500 text-2xl font-semibold">
+            What We Are Doing
+          </span>
+          <h2 className="text-2xl md:text-5xl font-semibold text-blue-950 md:w-[700px] mx-auto mt-10">
             We Arrange Many Social Events For Charity Donations
           </h2>
         </div>
-
         {/* Events List */}
         <div className="space-y-8">
           {events.map((event, index) => (
