@@ -39,7 +39,7 @@ const Thirdsection = () => {
               <img
                 src={img1}
                 alt=""
-                className="hidden md:absolute bottom-0 -left-48"
+                className="hidden md:block md:absolute bottom-0 -left-48"
               />
             </div>
             <div className="">

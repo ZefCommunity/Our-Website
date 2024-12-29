@@ -8,7 +8,7 @@ const HeroSection = () => {
       <img
         src={HeroImage}
         alt="Hero Background"
-        className="hidden lg:absolute  inset-0 w-full h-full object-cover"
+        className="hidden lg:block lg:absolute  inset-0 w-full h-full object-cover"
       />
 
       {/* Content aligned to the left */}
