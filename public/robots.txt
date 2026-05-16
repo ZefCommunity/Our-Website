@@ -1,0 +1,10 @@
+# ZEF — Zurfte Empowercare Foundation
+# https://www.zurfteempowercare.org
+
+User-agent: *
+Allow: /
+
+# Legacy blog routes kept for compatibility; marked noindex in app metadata
+Disallow: /blogDetail
+
+Sitemap: https://www.zurfteempowercare.org/sitemap.xml

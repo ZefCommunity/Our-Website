@@ -50,11 +50,13 @@ const campaigns = [
 
 function LatestCause() {
   return (
-    <div>
-      <div className="w-[90%] mx-auto">
-        <div className="flex items-center justify-center h-[300px]">
-          <h2 className="text-5xl font-bold text-blue-950">Programs &amp; Impact</h2>
-        </div>
+    <main className="bg-white">
+      <div className="mx-auto w-[90%] max-w-6xl px-4 sm:px-6">
+        <header className="flex h-[220px] items-center justify-center sm:h-[280px]">
+          <h1 className="text-center text-3xl font-bold text-blue-950 sm:text-4xl md:text-5xl">
+            Programs &amp; Impact
+          </h1>
+        </header>
         <div className="bg-gray-100 min-h-screen flex items-center justify-center mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
             {campaigns.map((campaign, index) => (
@@ -85,7 +87,7 @@ function LatestCause() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

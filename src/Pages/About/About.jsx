@@ -29,16 +29,16 @@ function About() {
   ];
 
   return (
-    <div>
+    <main className="bg-white">
       <div className="w-[90%] mx-auto">
         <div>
           <div className="text-center my-10 md:my-20">
             <span className="text-green-500 text-2xl font-semibold">
               What we are doing
             </span>
-            <h2 className="text-2xl md:text-2xl font-semibold text-blue-950 md:w-[600px] mx-auto mt-10">
+            <h1 className="text-2xl md:text-4xl font-semibold text-blue-950 md:w-[600px] mx-auto mt-10">
               Empowering Youth and Communities for Lasting Impact
-            </h2>
+            </h1>
           </div>
           {/* cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-8 md:px-16">
@@ -122,11 +122,16 @@ function About() {
                     <img
                       src={img1}
                       alt=""
+                      aria-hidden
                       className="absolute bottom-0 -left-48"
                     />
                   </div>
                   <div className="">
-                    <img src={img2} alt="" className="" />
+                    <img
+                      src={img2}
+                      alt="ZEF youth empowerment and community programs"
+                      className=""
+                    />
                   </div>
                 </div>
               </div>
@@ -137,7 +142,7 @@ function About() {
         </div>
       </div>
       <Tenthsection />
-    </div>
+    </main>
   );
 }
 

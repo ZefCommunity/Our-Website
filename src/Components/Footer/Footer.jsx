@@ -4,8 +4,13 @@ import {
   ZEF_EMAIL,
   ZEF_NAME,
   ZEF_SHORT,
+  ZEF_DISCORD_URL,
   ZEF_TAGLINE,
 } from '../../config/branding';
+import {
+  HOME_SECTIONS,
+  homeSectionPath,
+} from '../../config/homepageSections';
 
 const Footer = () => {
   return (
@@ -32,7 +37,7 @@ const Footer = () => {
           <ul>
             <li className="mt-2">
               <Link
-                to="/about"
+                to={homeSectionPath(HOME_SECTIONS.about)}
                 className="text-sm text-gray-300 hover:text-green-500 transition"
               >
                 About {ZEF_SHORT}
@@ -40,15 +45,15 @@ const Footer = () => {
             </li>
             <li className="mt-2">
               <Link
-                to="/LatestCause"
+                to={homeSectionPath(HOME_SECTIONS.programs)}
                 className="text-sm text-gray-300 hover:text-green-500 transition"
               >
-                Programs &amp; Impact
+                Our Programs
               </Link>
             </li>
             <li className="mt-2">
               <Link
-                to="/socialEvents"
+                to={homeSectionPath(HOME_SECTIONS.events)}
                 className="text-sm text-gray-300 hover:text-green-500 transition"
               >
                 Community Events
@@ -56,10 +61,18 @@ const Footer = () => {
             </li>
             <li className="mt-2">
               <Link
-                to="/blog"
+                to="/volunteer"
                 className="text-sm text-gray-300 hover:text-green-500 transition"
               >
-                News &amp; Insights
+                Volunteer
+              </Link>
+            </li>
+            <li className="mt-2">
+              <Link
+                to="/partnerships"
+                className="text-sm text-gray-300 hover:text-green-500 transition"
+              >
+                Partnerships
               </Link>
             </li>
             <li className="mt-2">
@@ -79,20 +92,14 @@ const Footer = () => {
             Join our community for updates on youth programs, innovation
             initiatives, and empowerment opportunities.
           </p>
-          {/* TODO: Connect newsletter form to email service (e.g. Mailchimp, Brevo) */}
-          <form className="mt-4 flex">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="w-full px-4 py-2 text-sm text-gray-900 rounded-l focus:outline-none"
-            />
-            <button
-              type="button"
-              className="bg-green-500 px-4 py-2 text-white rounded-r hover:bg-green-600 transition"
-            >
-              Join Community
-            </button>
-          </form>
+          <a
+            href={ZEF_DISCORD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
+          >
+            Join Our Community
+          </a>
         </div>
       </div>
 

@@ -1,72 +1,81 @@
+﻿import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import fifth1 from '../../../assets/fifth1.png';
 import fifth2 from '../../../assets/fifth2.png';
 import fifth3 from '../../../assets/fifth3.png';
+import { HOME_SECTIONS } from '../../../config/homepageSections';
+import { SectionHeader } from '../shared/SectionHeader';
+import { SectionShell } from '../shared/SectionShell';
+import { SECTION_CONTENT_GAP } from '../shared/sectionUi';
 
 const Fifthsection = () => {
   const events = [
     {
       title: 'Youth Innovation Workshop',
-      time: '9:00 AM - 12:00 PM',
-      date: 'TBD 2026',
-      location: 'Community venue � details coming soon',
+      date: '7th – 14th September, 2026',
+      location: 'Microsoft Teams',
       image: fifth1,
     },
     {
       title: 'Digital Skills Bootcamp',
-      time: '10:00 AM - 4:00 PM',
-      date: 'TBD 2026',
-      location: 'Community venue � details coming soon',
+      date: '28th September, 2026',
+      location: 'Microsoft Teams',
       image: fifth2,
     },
     {
       title: 'Mentorship & Leadership Circle',
-      time: '2:00 PM - 5:00 PM',
-      date: 'TBD 2026',
-      location: 'Community venue � details coming soon',
+      date: '2nd July, 2026',
+      location: 'Microsoft Teams',
       image: fifth3,
     },
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="w-[90%] md:w-[70%] mx-auto px-4">
-        <div className="text-center my-10 md:my-20">
-          <span className="text-green-500 text-2xl font-semibold">
-            Community events
-          </span>
-          <h2 className="text-2xl md:text-5xl font-semibold text-blue-950 md:w-[700px] mx-auto mt-10">
-            Connecting Youth Through Learning, Mentorship, and Innovation
-          </h2>
-        </div>
-        {/* TODO: Replace with live events from CMS or events API */}
-        <div className="space-y-8">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-6 bg-gray-50 p-4 rounded-lg shadow"
-            >
+    <SectionShell
+      id={HOME_SECTIONS.events}
+      className="border-t border-slate-100 bg-white"
+    >
+      <SectionHeader
+        eyebrow="Community events"
+        title="Connecting Youth Through Learning, Mentorship, and Innovation"
+      />
+
+      {/* TODO: Replace with live events from CMS or events API */}
+      <ul className={`list-none space-y-4 sm:space-y-5 ${SECTION_CONTENT_GAP}`}>
+        {events.map((event) => (
+          <li key={event.title}>
+            <article className="flex flex-col gap-4 rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 shadow-sm transition-shadow duration-200 hover:shadow-md sm:flex-row sm:items-center sm:gap-6 sm:p-5">
               <img
                 src={event.image}
-                alt={event.title}
-                className="w-24 h-24 object-cover rounded-lg"
+                alt=""
+                className="h-24 w-full shrink-0 rounded-lg object-cover sm:h-24 sm:w-24"
               />
-              <div>
-                <h3 className="text-xl font-semibold text-blue-900">
+              <div className="min-w-0 flex-1">
+                <h3 className="text-lg font-semibold text-blue-900 sm:text-xl">
                   {event.title}
                 </h3>
-                <p className="text-gray-600">
-                  <span className="block">{event.time}</span>
-                  <span className="block">{event.date}</span>
-                  <span className="block">{event.location}</span>
-                </p>
+                <div className="mt-2 space-y-2 text-sm text-slate-600 sm:text-base">
+                  <div className="flex items-start gap-2 sm:items-center">
+                    <FaCalendarAlt
+                      className="mt-0.5 shrink-0 text-green-500 sm:mt-0"
+                      aria-hidden
+                    />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-start gap-2 sm:items-center">
+                    <FaMapMarkerAlt
+                      className="mt-0.5 shrink-0 text-green-500 sm:mt-0"
+                      aria-hidden
+                    />
+                    <span>{event.location}</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </SectionShell>
   );
 };
 
 export default Fifthsection;
-

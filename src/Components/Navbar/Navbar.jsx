@@ -2,6 +2,10 @@
 import { Link } from 'react-router-dom';
 import zeflogo from '../../assets/zeflogo.png';
 import { ZEF_SHORT } from '../../config/branding';
+import {
+  HOME_SECTIONS,
+  homeSectionPath,
+} from '../../config/homepageSections';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,7 +69,7 @@ const Navbar = () => {
           </li>
           <li className="border-t md:border-none">
             <Link
-              to="/about"
+              to={homeSectionPath(HOME_SECTIONS.about)}
               className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
               onClick={handleLinkClick}
             >
@@ -74,29 +78,20 @@ const Navbar = () => {
           </li>
           <li className="border-t md:border-none">
             <Link
-              to="/LatestCause"
+              to={homeSectionPath(HOME_SECTIONS.programs)}
               className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
               onClick={handleLinkClick}
             >
-              Programs
+              Our Programs
             </Link>
           </li>
           <li className="border-t md:border-none">
             <Link
-              to="/socialEvents"
+              to={homeSectionPath(HOME_SECTIONS.events)}
               className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
               onClick={handleLinkClick}
             >
               Events
-            </Link>
-          </li>
-          <li className="border-t md:border-none">
-            <Link
-              to="/blog"
-              className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
-              onClick={handleLinkClick}
-            >
-              Blog
             </Link>
           </li>
           <li className="border-t md:border-none">

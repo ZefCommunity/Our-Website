@@ -3,31 +3,23 @@
 import Firstsection from '../Herosection/Firstsection';
 import Secondsection from '../Herosection/Secondsection';
 import Thirdsection from '../Herosection/Thirdsection';
-
-import Fourthsection from '../Herosection/Fourthsection';
 import Fifthsection from '../Herosection/Fifthsection';
-import Sixthsection from '../Herosection/Sixthsection';
-import Seventhsection from '../Herosection/Seventhsection';
-import Eightsection from '../Herosection/Eightsection';
-import Ninthsection from '../Herosection/Ninthsection';
 import Tenthsection from '../Herosection/Tenthsection';
 
 const Layout = () => {
   return (
-    <>
+    <main
+      id="homepage"
+      className="overflow-x-hidden bg-white"
+      aria-label="ZEF homepage"
+    >
       <Firstsection />
-      <Secondsection />
       <Thirdsection />
-      <Fourthsection />
-      <Fifthsection />
-      <Sixthsection />
-      <Seventhsection />
-      <Eightsection />
-      <Ninthsection />
+      <Secondsection />
       <Tenthsection />
-    </>
+      <Fifthsection />
+    </main>
   );
 };
 
 export default Layout;
-

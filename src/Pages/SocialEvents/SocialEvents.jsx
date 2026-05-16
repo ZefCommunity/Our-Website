@@ -47,11 +47,13 @@ function SocialEvents() {
   ];
 
   return (
-    <div>
+    <main className="bg-white">
       <div>
-        <div className="flex items-center justify-center h-[300px]">
-          <h2 className="text-5xl font-bold text-blue-950">Community Events</h2>
-        </div>
+        <header className="flex h-[220px] items-center justify-center sm:h-[280px]">
+          <h1 className="text-center text-3xl font-bold text-blue-950 sm:text-4xl md:text-5xl">
+            Community Events
+          </h1>
+        </header>
 
         <Tenthsection />
 
@@ -99,7 +101,7 @@ function SocialEvents() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

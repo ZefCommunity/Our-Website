@@ -1,0 +1,16 @@
+{
+  "name": "Zurfte Empowercare Foundation",
+  "short_name": "ZEF",
+  "description": "Youth empowerment through digital skills, entrepreneurship, and innovation programs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#072366",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
+import { ZEF_DISCORD_URL } from '../../config/branding';
 import img1 from '../../assets/img/blog/single_blog_1.png';
 import {
   FaUser,
@@ -293,9 +294,14 @@ function BlogDetails() {
                 placeholder="Enter Email"
                 className="py-4 px-5 mx-3 border-none outline-none"
               />
-              <button className="py-5 border mx-4 mt-5 hover:bg-green-500">
+              <a
+                href={ZEF_DISCORD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-5 border mx-4 mt-5 text-center hover:bg-green-500"
+              >
                 Join Community
-              </button>
+              </a>
             </div>
           </div>
         </div>

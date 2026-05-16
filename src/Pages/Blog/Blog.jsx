@@ -11,6 +11,7 @@ import image8 from '../../assets/img/post/post_8.png';
 import image9 from '../../assets/img/post/post_9.png';
 import image10 from '../../assets/img/post/post_10.png';
 import blogs from './blogs';
+import { ZEF_DISCORD_URL } from '../../config/branding';
 import { FaUser, FaComment, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -238,9 +239,14 @@ function Blog() {
                   placeholder="Enter Email"
                   className="py-4 px-5 mx-3 border-none outline-none"
                 />
-                <button className="py-5 border mx-4 mt-5 hover:bg-green-500">
+                <a
+                  href={ZEF_DISCORD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-5 border mx-4 mt-5 text-center hover:bg-green-500"
+                >
                   Join Community
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -8,6 +8,22 @@ export default {
         "josefin-sans": ["Josefin Sans", "sans-serif"],
         "montserrat": ["Montserrat", "sans-serif"]
       },
+      colors: {
+        zef: {
+          navy: "#072366",
+          green: "#0ecb7d",
+          "green-dark": "#0ab56d",
+        },
+      },
+      animation: {
+        "fade-in-up": "fadeInUp 0.65s ease-out forwards",
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
     },
   },
   plugins: [],
