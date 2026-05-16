@@ -1,28 +1,27 @@
-import React from 'react';
-import HeroImage from '../../../assets/image.png';
+﻿import HeroImage from '../../../assets/image.png';
+import { ZEF_TAGLINE } from '../../../config/branding';
 
 const HeroSection = () => {
   return (
     <div className="relative mt-10 lg:mt-0 flex flex-col md:flex-row items-center md:min-h-screen px-8 md:px-20">
-      {/* Background Image */}
+      {/* TODO: Replace hero image with official ZEF photography */}
       <img
         src={HeroImage}
-        alt="Hero Background"
+        alt="Zurfte Empowercare Foundation â€” youth empowerment and community innovation"
         className="hidden lg:block lg:absolute  inset-0 w-full h-full object-cover"
       />
 
-      {/* Content aligned to the left */}
       <div className="relative z-10 max-w-xl space-y-6">
         <h1 className="text-5xl font-bold text-blue-900 leading-tight">
-          Our Helping <br /> To The World.
+          Empowering Youth Through Innovation &amp; Community
         </h1>
-        <p className="text-gray-600">
-          Onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut bore
-          et dolore magnt, sed do eiusmod.
-        </p>
+        <p className="text-gray-600">{ZEF_TAGLINE}</p>
         <div className="flex space-x-4">
-          <button className="bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600">
-            Donate
+          <button
+            type="button"
+            className="bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600"
+          >
+            Support Our Mission
           </button>
           <div className="flex items-center space-x-2">
             <div className="bg-green-100 p-2 rounded-full">
@@ -41,7 +40,8 @@ const HeroSection = () => {
                 />
               </svg>
             </div>
-            <span className="text-blue-900 font-medium">+12 1325 41</span>
+            {/* TODO: Add official ZEF phone number when available */}
+            <span className="text-blue-900 font-medium">Contact us online</span>
           </div>
         </div>
       </div>
@@ -50,3 +50,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

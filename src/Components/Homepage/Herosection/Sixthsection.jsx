@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import sixth1 from '../../../assets/sixth1.png';
 import sixth2 from '../../../assets/sixth2.png';
@@ -6,45 +6,46 @@ import sixth3 from '../../../assets/sixth3.png';
 import sixth4 from '../../../assets/sixth4.png';
 
 const Sixthsection = () => {
+  // TODO: Replace with real ZEF team photos, names, and roles
   const volunteers = [
     {
-      name: 'Bruce Roberts',
-      role: 'Volunteer leader',
+      name: 'Program Lead (TBD)',
+      role: 'Youth Development',
       image: sixth1,
       social: {
-        facebook: 'https://facebook.com/bruce',
-        twitter: 'https://twitter.com/bruce',
-        linkedin: 'https://linkedin.com/in/bruce',
+        facebook: '#',
+        twitter: '#',
+        linkedin: '#',
       },
     },
     {
-      name: 'Robart Rechard',
-      role: 'Volunteer leader',
+      name: 'Mentor (TBD)',
+      role: 'Mentorship & Community',
       image: sixth2,
       social: {
-        facebook: 'https://facebook.com/robart',
-        twitter: 'https://twitter.com/robart',
-        linkedin: 'https://linkedin.com/in/robart',
+        facebook: '#',
+        twitter: '#',
+        linkedin: '#',
       },
     },
     {
-      name: 'Brendon Tailor',
-      role: 'Volunteer leader',
+      name: 'Innovation Coach (TBD)',
+      role: 'Entrepreneurship',
       image: sixth3,
       social: {
-        facebook: 'https://facebook.com/brendon',
-        twitter: 'https://twitter.com/brendon',
-        linkedin: 'https://linkedin.com/in/brendon',
+        facebook: '#',
+        twitter: '#',
+        linkedin: '#',
       },
     },
     {
-      name: 'Walshr Hasgt',
-      role: 'Volunteer leader',
+      name: 'Community Partner (TBD)',
+      role: 'Partnerships',
       image: sixth4,
       social: {
-        facebook: 'https://facebook.com/walshr',
-        twitter: 'https://twitter.com/walshr',
-        linkedin: 'https://linkedin.com/in/walshr',
+        facebook: '#',
+        twitter: '#',
+        linkedin: '#',
       },
     },
   ];
@@ -56,10 +57,10 @@ const Sixthsection = () => {
 
         <div className="text-center my-20">
           <span className="text-green-500 text-2xl font-semibold">
-            What We Are Doing
+            Our team
           </span>
           <h2 className="text-2xl md:text-5xl font-semibold text-blue-950 md:w-[700px] mx-auto mt-10">
-            Our Expert Volunteer Always Ready
+            Mentors and Leaders Committed to Youth Empowerment
           </h2>
         </div>
         {/* Volunteers */}
@@ -122,3 +123,4 @@ const Sixthsection = () => {
 };
 
 export default Sixthsection;
+

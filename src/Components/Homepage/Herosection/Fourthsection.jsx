@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import case1 from '../../../assets/case1.png';
 import case2 from '../../../assets/case2.png';
 import case3 from '../../../assets/case3.png';
@@ -10,10 +10,10 @@ const Fourthsection = () => {
         <div className="container mx-auto text-center">
           <div className="text-center my-10 md:my-20">
             <span className="text-green-500 text-2xl font-semibold">
-              Our Cases You Can See
+              Our programs
             </span>
             <h2 className="text-2xl md:text-5xl font-semibold text-blue-950 md:w-[600px] mx-auto mt-10">
-              Explore Our Latest Causes That We Work On
+              Explore Initiatives Driving Youth &amp; Community Impact
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -21,16 +21,16 @@ const Fourthsection = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
                 src={case1}
-                alt="Ensure Education"
+                alt="Youth digital skills program"
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-blue-900">
-                  Ensure Education For Every Poor Children
+                  Youth Digital Skills Accelerator
                 </h3>
                 <p className="text-gray-500 text-sm mb-4">
-                  Raised: <strong>$20,000</strong> | Goal:{' '}
-                  <strong>$35,000</strong>
+                  Enrolled: <strong>120</strong> | Goal:{' '}
+                  <strong>200</strong>
                 </p>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div
@@ -46,16 +46,16 @@ const Fourthsection = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
                 src={case2}
-                alt="Healthy Food"
+                alt="Entrepreneurship and innovation lab"
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-blue-900">
-                  Providing Healthy Food For The Children
+                  Entrepreneurship &amp; Innovation Lab
                 </h3>
                 <p className="text-gray-500 text-sm mb-4">
-                  Raised: <strong>$20,000</strong> | Goal:{' '}
-                  <strong>$35,000</strong>
+                  Participants: <strong>45</strong> | Goal:{' '}
+                  <strong>80</strong>
                 </p>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div
@@ -71,16 +71,16 @@ const Fourthsection = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
                 src={case3}
-                alt="Drinking Water"
+                alt="Community mentorship network"
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-blue-900">
-                  Supply Drinking Water For The People
+                  Community Mentorship Network
                 </h3>
                 <p className="text-gray-500 text-sm mb-4">
-                  Raised: <strong>$20,000</strong> | Goal:{' '}
-                  <strong>$35,000</strong>
+                  Mentors matched: <strong>60</strong> | Goal:{' '}
+                  <strong>100</strong>
                 </p>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div
@@ -99,3 +99,4 @@ const Fourthsection = () => {
 };
 
 export default Fourthsection;
+

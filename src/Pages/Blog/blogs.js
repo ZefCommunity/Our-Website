@@ -4,51 +4,52 @@ import img3 from '../../assets/img/blog/single_blog_3.png';
 import img4 from '../../assets/img/blog/single_blog_4.png';
 import img5 from '../../assets/img/blog/single_blog_5.png';
 
+// TODO: Replace with CMS-backed blog posts and unique slugs per article
 const blogs = [
   {
     id: 1,
     img: img1,
-    title: 'Google inks pact for new 35-storey office',
+    title: 'How Digital Skills Open Doors for Underserved Youth',
     date: 15,
     month: 'Jan',
     content:
-      "That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.",
+      'ZEF is expanding access to technology training so young people can learn, innovate, and build sustainable futures in their communities.',
   },
   {
     id: 2,
     img: img2,
-    title: 'Google inks pact for new 35-storey office',
-    date: 15,
-    month: 'Jan',
+    title: 'Entrepreneurship Mentorship: From Idea to Impact',
+    date: 22,
+    month: 'Feb',
     content:
-      "That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.",
+      'Our entrepreneurship programs connect youth with mentors, resources, and community support to turn ideas into real-world solutions.',
   },
   {
     id: 3,
     img: img3,
-    title: 'Google inks pact for new 35-storey office',
-    date: 15,
-    month: 'Jan',
+    title: 'Community Innovation Labs: Learning Together',
+    date: 8,
+    month: 'Mar',
     content:
-      "That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.",
+      'Innovation labs bring together students, volunteers, and partners to collaborate on projects that strengthen local communities.',
   },
   {
     id: 4,
     img: img4,
-    title: 'Google inks pact for new 35-storey office',
-    date: 15,
-    month: 'Jan',
+    title: 'Volunteer Mentors Power Youth Development at ZEF',
+    date: 1,
+    month: 'Apr',
     content:
-      "That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.",
+      'Dedicated mentors help young people build confidence, leadership, and pathways toward education and employment.',
   },
   {
     id: 5,
     img: img5,
-    title: 'Google inks pact for new 35-storey office',
-    date: 15,
-    month: 'Jan',
+    title: 'Partnerships That Scale Community Empowerment',
+    date: 18,
+    month: 'May',
     content:
-      "That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.",
+      'ZEF partners with schools, nonprofits, and local leaders to deliver programs that create lasting opportunity.',
   },
 ];
 

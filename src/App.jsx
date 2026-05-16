@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import React from 'react';
+﻿import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ZEF_META_DESCRIPTION, ZEF_NAME } from './config/branding';
 import Layout from './Components/Homepage/Layout/Layout';
 import About from './Pages/About/About';
 import LatestCause from './Pages/LatestCause/LatestCause';
@@ -16,9 +16,19 @@ import Loader from './Components/Loader/Loader';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
+    document.title = `${ZEF_NAME} (ZEF)`;
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', ZEF_META_DESCRIPTION);
+
+    const timer = setTimeout(() => {
       setLoading(false);
     }, 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return loading ? (
@@ -41,3 +51,4 @@ function App() {
 }
 
 export default App;
+

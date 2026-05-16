@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 import Firstsection from '../Herosection/Firstsection';
 import Secondsection from '../Herosection/Secondsection';
@@ -30,3 +30,4 @@ const Layout = () => {
 };
 
 export default Layout;
+

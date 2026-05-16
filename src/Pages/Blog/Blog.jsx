@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+﻿import React, { lazy } from 'react';
 
 import image1 from '../../assets/img/post/post_1.png';
 import image2 from '../../assets/img/post/post_2.png';
@@ -19,25 +19,25 @@ function Blog() {
     {
       id: 1,
       image: image1,
-      title: 'From life was you fish...',
+      title: 'Youth digital skills update',
       date: 'January 12, 2019',
     },
     {
       id: 2,
       image: image2,
-      title: 'The Amazing Hubble',
+      title: 'Mentorship in action',
       date: '03 Hours ago',
     },
     {
       id: 3,
       image: image3,
-      title: 'Astronomy Or Astrology',
+      title: 'Community innovation highlights',
       date: 'January 12, 2019',
     },
     {
       id: 4,
       image: image4,
-      title: 'From life was you fish...',
+      title: 'Youth digital skills update',
       date: 'January 12, 2019',
     },
   ];
@@ -73,7 +73,7 @@ function Blog() {
       <div className="w-full">
         {/* header */}
         <div className="flex items-center justify-center h-[300px]">
-          <h2 className="text-5xl font-bold text-blue-950">Blogs</h2>
+          <h2 className="text-5xl font-bold text-blue-950">News &amp; Insights</h2>
         </div>
 
         {/* Body */}
@@ -115,7 +115,7 @@ function Blog() {
                 <div className="flex px-4 text-gray-600">
                   <div className="flex items-center gap-1 ">
                     <FaUser />
-                    <p>Travel, Lifestyle</p>
+                    <p>Youth Development, Innovation</p>
                   </div>
                   <p className="mx-4">|</p>
                   <div className="flex items-center gap-1 ">
@@ -149,27 +149,27 @@ function Blog() {
               <hr />
               <div className=" ">
                 <p className="py-2 l px-4 hover:text-green-500">
-                  Restaurant(37){' '}
+                  Youth Development
                 </p>{' '}
                 <hr />
                 <p className="py-2 px-4 hover:text-green-500">
-                  Travel news(10){' '}
+                  Digital Skills
                 </p>{' '}
                 <hr />
                 <p className="py-2 px-4 hover:text-green-500">
-                  Modern technology(03){' '}
+                  Entrepreneurship
                 </p>{' '}
                 <hr />
                 <p className="py-2 px-4 hover:text-green-500">
-                  Products(11){' '}
+                  Mentorship
                 </p>{' '}
                 <hr />
                 <p className="py-2 px-4 hover:text-green-500">
-                  Inspiration(21){' '}
+                  Community Impact
                 </p>{' '}
                 <hr />
                 <p className="py-2 px-4 hover:text-green-500">
-                  Health Care(09){' '}
+                  Innovation
                 </p>
               </div>
             </div>
@@ -198,14 +198,14 @@ function Blog() {
               <hr />
 
               <div className="grid grid-cols-3 gap-3 px-5 py-5">
-                <p className="bg-white w-max p-1 border">Project</p>
-                <p className="bg-white w-max p-1 border">Love</p>
-                <p className="bg-white w-max p-1 border">Technology</p>
-                <p className="bg-white w-max p-1 border">Travel</p>
-                <p className="bg-white w-max p-1 border">Restaurant</p>
-                <p className="bg-white w-max p-1 border">Life Style</p>
-                <p className="bg-white w-max p-1 border">Design</p>
-                <p className="bg-white w-max p-1 border">Illustration</p>
+                <p className="bg-white w-max p-1 border">Youth</p>
+                <p className="bg-white w-max p-1 border">Mentorship</p>
+                <p className="bg-white w-max p-1 border">Innovation</p>
+                <p className="bg-white w-max p-1 border">Community</p>
+                <p className="bg-white w-max p-1 border">Digital Skills</p>
+                <p className="bg-white w-max p-1 border">Empowerment</p>
+                <p className="bg-white w-max p-1 border">Leadership</p>
+                <p className="bg-white w-max p-1 border">Partners</p>
               </div>
             </div>
 
@@ -229,7 +229,7 @@ function Blog() {
             </div>
 
             <div className="bg-gray-50">
-              <h2 className="py-5 px-4 text-2xl ">News Letter</h2>
+              <h2 className="py-5 px-4 text-2xl ">Stay Connected</h2>
               <hr />
 
               <div className="flex flex-col py-4">
@@ -239,7 +239,7 @@ function Blog() {
                   className="py-4 px-5 mx-3 border-none outline-none"
                 />
                 <button className="py-5 border mx-4 mt-5 hover:bg-green-500">
-                  SUBSCRIBE
+                  Join Community
                 </button>
               </div>
             </div>
@@ -251,3 +251,4 @@ function Blog() {
 }
 
 export default Blog;
+

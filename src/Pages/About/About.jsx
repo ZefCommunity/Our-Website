@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { FaCog, FaBrain, FaDesktop } from 'react-icons/fa';
 import img1 from '../../assets/img/gallery/about2.png';
 import img2 from '../../assets/img/gallery/about1.png';
@@ -9,22 +9,22 @@ function About() {
   const cards = [
     {
       icon: <FaDesktop className="text-4xl" />,
-      title: 'Clean Water',
+      title: 'Digital Skills',
       description:
-        'The sea freight service has grown considerably in recent years. We spend time getting to know your processes too.',
+        'Equipping youth with technology training and practical tools for learning, employment, and innovation.',
     },
     {
       icon: <FaBrain className="text-4xl" />,
-      title: 'Clean Water',
+      title: 'Entrepreneurship & Innovation',
       description:
-        'The sea freight service has grown considerably in recent years. We spend time getting to know your processes too.',
-      isActive: true, // Highlights this card
+        'Fostering creative problem-solving, mentorship, and youth-led ventures that strengthen communities.',
+      isActive: true,
     },
     {
       icon: <FaCog className="text-4xl" />,
-      title: 'Clean Water',
+      title: 'Community Empowerment',
       description:
-        'The sea freight service has grown considerably in recent years. We spend time getting to know your processes too.',
+        'Building partnerships and programs that expand opportunity for underserved youth and families.',
     },
   ];
 
@@ -37,7 +37,7 @@ function About() {
               What we are doing
             </span>
             <h2 className="text-2xl md:text-2xl font-semibold text-blue-950 md:w-[600px] mx-auto mt-10">
-              We Are In A Mission To Help The Helpless
+              Empowering Youth and Communities for Lasting Impact
             </h2>
           </div>
           {/* cards */}
@@ -91,27 +91,29 @@ function About() {
                 <div className="">
                   <div className="">
                     <span className="text-green-500 text-2xl font-semibold">
-                      About our foundation
+                      About ZEF
                     </span>
                     <h2 className="text-5xl font-semibold text-blue-950 mx-auto mt-10">
-                      We Are In A Mission To Help Helpless
+                      Our Mission: Opportunity Through Empowerment
                     </h2>
                   </div>
                   <p className="py-7">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,mod
-                    tempor incididunt ut labore et dolore magna aliqua. Utnixm,
-                    quis nostrud exercitation ullamc.
+                    Zurfte Empowercare Foundation (ZEF) empowers youth and
+                    underserved communities through digital skills,
+                    entrepreneurship, mentorship, innovation, and
+                    community-driven opportunities.
                   </p>
                   <p className="py-7">
-                    Lorem ipvsum dolor sit amext, consectetur adipisicing elit,
-                    smod tempor incididunt ut labore et dolore.
+                    {/* TODO: Replace with leadership-approved vision, history, and impact narrative */}
+                    We collaborate with partners to deliver programs that build
+                    confidence, capability, and pathways to a stronger future.
                   </p>
                 </div>
                 <a
-                  href="about.html"
+                  href="/LatestCause"
                   className="bg-green-500 w-max py-2 px-5 font-bold rounded-md hover:bg-green-700 text-blue-950"
                 >
-                  What We Do
+                  View Our Programs
                 </a>
               </div>
               <div className="">
@@ -140,3 +142,4 @@ function About() {
 }
 
 export default About;
+

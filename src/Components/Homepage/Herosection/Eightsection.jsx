@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import bgimg from '../../../assets/eight1.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
@@ -7,30 +7,31 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
 const Eightsection = () => {
+  // TODO: Replace with authentic ZEF participant and partner testimonials
   const testimonials = [
     {
       id: 1,
       image: bgimg,
-      name: 'John Doe',
-      role: 'Software Engineer',
+      name: 'Youth Program Participant',
+      role: 'Digital Skills Graduate',
       testimonial:
-        'This service has truly transformed the way we operate. Highly recommend it!',
+        'ZEF helped me build confidence and practical skills to pursue opportunities in tech and entrepreneurship.',
     },
     {
       id: 2,
       image: bgimg,
-      name: 'Jane Smith',
-      role: 'Marketing Manager',
+      name: 'Community Mentor',
+      role: 'Volunteer Leader',
       testimonial:
-        "Exceptional quality and attention to detail. I'm very impressed!",
+        'The foundation creates real spaces for mentorship, innovation, and community-driven growth.',
     },
     {
       id: 3,
       image: bgimg,
-      name: 'Alice Johnson',
-      role: 'Product Designer',
+      name: 'Program Partner',
+      role: 'Community Organization',
       testimonial:
-        'A seamless experience from start to finish. Will use again for sure!',
+        'Partnering with ZEF amplifies our impact and opens doors for young people in underserved communities.',
     },
   ];
 
@@ -72,3 +73,4 @@ const Eightsection = () => {
 };
 
 export default Eightsection;
+

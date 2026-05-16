@@ -1,13 +1,14 @@
-import React from 'react';
+﻿import React from 'react';
 import backgroundImage from '../../../assets/tenth1.png';
 import CountUp from 'react-countup';
 
 const Tenthsection = () => {
+  // TODO: Replace with verified ZEF impact metrics
   const countUpData = [
-    { number: 6200, content: 'Donation' },
-    { number: 80, content: 'Fund Raised' },
-    { number: 256, content: 'Active Donors' },
-    { number: 50, content: 'Awards Won' },
+    { number: 500, content: 'Youth Reached' },
+    { number: 25, content: 'Programs Delivered' },
+    { number: 40, content: 'Community Partners' },
+    { number: 15, content: 'Innovation Projects' },
   ];
   return (
     <section
@@ -40,3 +41,4 @@ const Tenthsection = () => {
 };
 
 export default Tenthsection;
+

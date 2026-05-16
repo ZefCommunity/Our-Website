@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { CiClock2, CiCalendarDate, CiLocationOn } from "react-icons/ci";
 import heroBg from "../assets/images/backgrounds/hero2.png";
@@ -59,7 +59,7 @@ const SocialEvents = () => {
           What We Are Doing
         </h2>
         <h1 className="capitalize text-[#072366] text-3xl md:text-4xl md:w-[55%] mx-auto font-bold mt-6 md:mt-8 leading-loose">
-          We arrange many social events for charity donations
+          Events That Connect Youth, Mentors, and Communities
         </h1>
         <ul className="space-y-16 my-12 md:w-8/12 md:mx-auto md:space-y-10">
           <li className="space-y-4 md:flex gap-12 text-left items-center hover:shadow-lg rounded-lg">
@@ -79,7 +79,7 @@ const SocialEvents = () => {
                   <CiCalendarDate /> 18.01.2021
                 </span>
                 <span className="inline-flex gap-2 items-center">
-                  <CiLocationOn /> Athens, Greece
+                  <CiLocationOn /> Community venue — details coming soon
                 </span>
               </p>
             </div>
@@ -101,7 +101,7 @@ const SocialEvents = () => {
                   <CiCalendarDate /> 18.01.2021
                 </span>
                 <span className="inline-flex gap-2 items-center">
-                  <CiLocationOn /> Athens, Greece
+                  <CiLocationOn /> Community venue — details coming soon
                 </span>
               </p>
             </div>
@@ -123,7 +123,7 @@ const SocialEvents = () => {
                   <CiCalendarDate /> 18.01.2021
                 </span>
                 <span className="inline-flex gap-2 items-center">
-                  <CiLocationOn /> Athens, Greece
+                  <CiLocationOn /> Community venue — details coming soon
                 </span>
               </p>
             </div>
@@ -145,7 +145,7 @@ const SocialEvents = () => {
                   <CiCalendarDate /> 18.01.2021
                 </span>
                 <span className="inline-flex gap-2 items-center">
-                  <CiLocationOn /> Athens, Greece
+                  <CiLocationOn /> Community venue — details coming soon
                 </span>
               </p>
             </div>
@@ -167,7 +167,7 @@ const SocialEvents = () => {
                   <CiCalendarDate /> 18.01.2021
                 </span>
                 <span className="inline-flex gap-2 items-center">
-                  <CiLocationOn /> Athens, Greece
+                  <CiLocationOn /> Community venue — details coming soon
                 </span>
               </p>
             </div>
@@ -181,3 +181,4 @@ const SocialEvents = () => {
 };
 
 export default SocialEvents;
+

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import img1 from '../../assets/img/blog/single_blog_1.png';
 import {
@@ -26,25 +26,25 @@ function BlogDetails() {
     {
       id: 1,
       image: image1,
-      title: 'From life was you fish...',
+      title: 'Youth digital skills update',
       date: 'January 12, 2019',
     },
     {
       id: 2,
       image: image2,
-      title: 'The Amazing Hubble',
+      title: 'Mentorship in action',
       date: '03 Hours ago',
     },
     {
       id: 3,
       image: image3,
-      title: 'Astronomy Or Astrology',
+      title: 'Community innovation highlights',
       date: 'January 12, 2019',
     },
     {
       id: 4,
       image: image4,
-      title: 'From life was you fish...',
+      title: 'Youth digital skills update',
       date: 'January 12, 2019',
     },
   ];
@@ -79,7 +79,7 @@ function BlogDetails() {
   return (
     <div>
       <div className="flex items-center justify-center h-[300px]">
-        <h2 className="text-5xl font-bold text-blue-950">Blog Details</h2>
+        <h2 className="text-5xl font-bold text-blue-950">ZEF News</h2>
       </div>
       <div className="w-[90%] mx-auto flex flex-col md:flex-row gap-10 mb-20">
         <div>
@@ -99,19 +99,19 @@ function BlogDetails() {
               </div>
               <div className="flex flex-col gap-5">
                 <h2 className="text-3xl font-semibold hover:text-green-500 text-blue-950 hover:text-green600 px-2">
-                  Google inks pact for new 35-storey office
+                  How Digital Skills Open Doors for Underserved Youth
                 </h2>
                 <p className="px-4 w-[700px]">
-                  {' '}
-                  That dominion stars lights dominion divide years for fourth
-                  have don't stars is that he earth it first without heaven in
-                  place seed it second morning saying.
+                  {/* TODO: Replace with full article body from CMS */}
+                  ZEF is expanding access to technology training so young people
+                  can learn, innovate, and build sustainable futures in their
+                  communities.
                 </p>
               </div>
               <div className="flex px-4 text-gray-600">
                 <div className="flex items-center gap-1 ">
                   <FaUser />
-                  <p>Travel, Lifestyle</p>
+                  <p>Youth Development, Innovation</p>
                 </div>
                 <p className="mx-4">|</p>
                 <div className="flex items-center gap-1 ">
@@ -206,11 +206,11 @@ function BlogDetails() {
             <hr />
             <div className=" ">
               <p className="py-2 l px-4 hover:text-green-500">
-                Restaurant(37){' '}
+                Youth Development
               </p>{' '}
               <hr />
               <p className="py-2 px-4 hover:text-green-500">
-                Travel news(10){' '}
+                Digital Skills
               </p>{' '}
               <hr />
               <p className="py-2 px-4 hover:text-green-500">
@@ -256,7 +256,7 @@ function BlogDetails() {
               <p className="bg-white w-max p-1 border">Project</p>
               <p className="bg-white w-max p-1 border">Love</p>
               <p className="bg-white w-max p-1 border">Technology</p>
-              <p className="bg-white w-max p-1 border">Travel</p>
+              <p className="bg-white w-max p-1 border">Innovation</p>
               <p className="bg-white w-max p-1 border">Restaurant</p>
               <p className="bg-white w-max p-1 border">Life Style</p>
               <p className="bg-white w-max p-1 border">Design</p>
@@ -294,7 +294,7 @@ function BlogDetails() {
                 className="py-4 px-5 mx-3 border-none outline-none"
               />
               <button className="py-5 border mx-4 mt-5 hover:bg-green-500">
-                SUBSCRIBE
+                Join Community
               </button>
             </div>
           </div>
@@ -305,3 +305,4 @@ function BlogDetails() {
 }
 
 export default BlogDetails;
+

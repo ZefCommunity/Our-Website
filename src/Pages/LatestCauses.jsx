@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import Progress from "../Components/ProgressBar";
 import heroBg from "../assets/images/backgrounds/hero2.png";
 import cause1 from "../assets/images/latest-causes/case1.png";
@@ -13,7 +13,7 @@ const LatestCauses = () => {
     <Navbar/>
       <div className="bg-cover bg-no-repeat bg-left" style={{ backgroundImage: `url(${heroBg})` }}>
         <h1 className="text-5xl font-bold text-center pt-32 pb-24 tracking-wide text-[#072366]">
-          Latest Causes
+          Programs &amp; Impact
         </h1>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-16 ml-5 mr-12 mt-12 mb-28">
@@ -169,3 +169,4 @@ const LatestCauses = () => {
 };
 
 export default LatestCauses;
+

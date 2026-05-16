@@ -1,4 +1,4 @@
-import ProgressBar from "@ramonak/react-progress-bar";
+﻿import ProgressBar from "@ramonak/react-progress-bar";
 
 const Progress = ({ completed }) => {
   return (
@@ -14,3 +14,4 @@ const Progress = ({ completed }) => {
 };
 
 export default Progress;
+
