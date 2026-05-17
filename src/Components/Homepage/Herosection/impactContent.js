@@ -10,29 +10,21 @@ export const IMPACT_STATS = [
   {
     id: 'volunteers',
     value: '50+',
-    countEnd: 50,
-    showCounter: true,
-    suffix: '+',
     label: 'Volunteers and Contributors',
   },
   {
     id: 'reach',
     value: '1000+',
-    countEnd: 1000,
-    showCounter: true,
-    suffix: '+',
     label: 'People Reached Through Digital Engagement',
   },
   {
     id: 'departments',
     value: 'Multiple',
-    showCounter: false,
     label: 'Departments Working Across Programs and Operations',
   },
   {
     id: 'community',
     value: 'Growing',
-    showCounter: false,
     label: 'Community Focused on Skills, Innovation, and Empowerment',
   },
 ];

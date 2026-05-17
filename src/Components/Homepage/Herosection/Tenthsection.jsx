@@ -1,5 +1,4 @@
-﻿import CountUp from 'react-countup';
-import {
+﻿import {
   FaBuilding,
   FaGlobeAmericas,
   FaSeedling,
@@ -42,19 +41,7 @@ function ImpactStatCard({ stat, index }) {
       </div>
 
       <div className="text-3xl font-bold leading-tight text-blue-900 sm:text-4xl">
-        {stat.showCounter ? (
-          <span className="inline-flex items-baseline gap-0.5">
-            <CountUp
-              end={stat.countEnd}
-              duration={2.5}
-              enableScrollSpy
-              scrollSpyOnce
-            />
-            <span>{stat.suffix}</span>
-          </span>
-        ) : (
-          <span>{stat.value}</span>
-        )}
+        <span>{stat.value}</span>
       </div>
 
       <p className="mt-4 text-sm leading-relaxed text-slate-700 sm:text-base">

@@ -14,7 +14,6 @@ export default defineConfig({
             if (id.includes('react-dom') || id.includes('react/')) return 'react-vendor';
             if (id.includes('react-icons')) return 'icons';
             if (id.includes('swiper')) return 'swiper';
-            if (id.includes('react-countup')) return 'countup';
           }
         },
       },
