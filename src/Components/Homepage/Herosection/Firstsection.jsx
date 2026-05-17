@@ -1,4 +1,4 @@
-﻿import HeroImage from '../../../assets/image.png';
+﻿import HeroImage from '../../../assets/image1.png';
 import { ZEF_DISCORD_URL, ZEF_TAGLINE } from '../../../config/branding';
 import { CtaLink } from '../shared/CtaLink';
 import { SECTION_CONTAINER } from '../shared/sectionUi';
