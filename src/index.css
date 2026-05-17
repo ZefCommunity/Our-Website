@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Sans:300,400,600,700,700i|Montserrat:200,300,400,500,600,700,800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +6,20 @@
   html {
     scroll-behavior: smooth;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  /* Below-fold sections: skip layout/paint until near viewport (Lighthouse-friendly) */
+  .content-visibility-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 480px;
+  }
 }
 
 .loader {
@@ -15,24 +27,33 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh; /* Full screen height */
-  background-color: #f9f9f9; /* Light background */
+  height: 100vh;
+  background-color: #f9f9f9;
 }
 
 .circle {
   width: 100px;
   height: 100px;
   border: 4px solid transparent;
-  border-top: 4px solid #3498db; /* Border color */
+  border-top: 4px solid #3498db;
   border-radius: 50%;
-  animation: spin 1.5s linear infinite; /* Rotating animation */
+  animation: spin 1.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    animation: none;
+    border-top-color: #3498db;
+    border-color: #3498db;
+    opacity: 0.35;
+  }
 }
 
 .text {
   position: absolute;
   font-size: 16px;
   font-weight: bold;
-  color: #07012c; /* Text color */
+  color: #07012c;
 }
 
 @keyframes spin {

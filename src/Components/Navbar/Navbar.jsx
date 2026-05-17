@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import zeflogo from '../../assets/zeflogo.png';
-import { ZEF_SHORT } from '../../config/branding';
+import { ZEF_DONATE_URL, ZEF_SHORT } from '../../config/branding';
 import {
   HOME_SECTIONS,
   homeSectionPath,
@@ -103,11 +103,24 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          <li className="border-t md:hidden">
+            <a
+              href={ZEF_DONATE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-4 my-2 block rounded bg-green-500 py-2 text-center font-semibold text-white hover:bg-green-600"
+              onClick={handleLinkClick}
+            >
+              Support Our Mission
+            </a>
+          </li>
         </ul>
 
         <div className="hidden md:flex">
           <a
-            href="#"
+            href={ZEF_DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-green-500 font-semibold text-white px-4 py-2 rounded transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-green-600"
           >
             Support Our Mission

@@ -8,12 +8,13 @@ export function SectionShell({
   ariaLabelledby,
   as: Tag = 'section',
   noPadding = false,
+  belowFold = false,
 }) {
   return (
     <Tag
       id={id}
       aria-labelledby={ariaLabelledby}
-      className={`${noPadding ? '' : SECTION_PY} ${id ? SECTION_SCROLL_MARGIN : ''} ${className}`.trim()}
+      className={`${noPadding ? '' : SECTION_PY} ${id ? SECTION_SCROLL_MARGIN : ''} ${belowFold ? 'content-visibility-section' : ''} ${className}`.trim()}
     >
       <div className={`${SECTION_CONTAINER} ${containerClassName}`.trim()}>
         {children}

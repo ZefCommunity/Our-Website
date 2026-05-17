@@ -2,6 +2,7 @@
 import fifth1 from '../../../assets/fifth1.png';
 import fifth2 from '../../../assets/fifth2.png';
 import fifth3 from '../../../assets/fifth3.png';
+import { OptimizedImage } from '../../shared/OptimizedImage';
 import { HOME_SECTIONS } from '../../../config/homepageSections';
 import { SectionHeader } from '../shared/SectionHeader';
 import { SectionShell } from '../shared/SectionShell';
@@ -33,6 +34,7 @@ const Fifthsection = () => {
     <SectionShell
       id={HOME_SECTIONS.events}
       className="border-t border-slate-100 bg-white"
+      belowFold
     >
       <SectionHeader
         eyebrow="Community events"
@@ -43,11 +45,12 @@ const Fifthsection = () => {
       <ul className={`list-none space-y-4 sm:space-y-5 ${SECTION_CONTENT_GAP}`}>
         {events.map((event) => (
           <li key={event.title}>
-            <article className="flex flex-col gap-4 rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 shadow-sm transition-shadow duration-200 hover:shadow-md sm:flex-row sm:items-center sm:gap-6 sm:p-5">
-              <img
+            <article className="flex flex-col gap-4 rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 shadow-sm transition-shadow duration-200 hover:shadow-md motion-safe:transition-shadow sm:flex-row sm:items-center sm:gap-6 sm:p-5">
+              <OptimizedImage
                 src={event.image}
                 alt=""
                 className="h-24 w-full shrink-0 rounded-lg object-cover sm:h-24 sm:w-24"
+                sizes="96px"
               />
               <div className="min-w-0 flex-1">
                 <h3 className="text-lg font-semibold text-blue-900 sm:text-xl">

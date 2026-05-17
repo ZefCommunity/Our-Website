@@ -1,5 +1,6 @@
 ﻿import img2 from '../../../assets/third1.png';
 import img1 from '../../../assets/third2.png';
+import { OptimizedImage } from '../../shared/OptimizedImage';
 import { ZEF_SHORT } from '../../../config/branding';
 import { HOME_SECTIONS } from '../../../config/homepageSections';
 import { CtaLink } from '../shared/CtaLink';
@@ -8,7 +9,7 @@ import { SectionShell } from '../shared/SectionShell';
 
 const Thirdsection = () => {
   return (
-    <SectionShell id={HOME_SECTIONS.about} className="bg-white">
+    <SectionShell id={HOME_SECTIONS.about} className="bg-white" belowFold>
       <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-12 xl:gap-16">
         <div className="w-full flex-1 lg:max-w-xl">
           <SectionHeader
@@ -38,16 +39,18 @@ const Thirdsection = () => {
         <div className="w-full flex-1 lg:flex lg:justify-end">
           {/* TODO: Replace with official ZEF team or program imagery */}
           <div className="relative mx-auto max-w-md lg:mx-0 lg:max-w-none">
-            <img
+            <OptimizedImage
               src={img1}
               alt=""
               aria-hidden
               className="hidden md:absolute md:bottom-0 md:-left-32 md:block lg:-left-40"
+              sizes="(max-width: 768px) 0px, 280px"
             />
-            <img
+            <OptimizedImage
               src={img2}
               alt="ZEF community and youth programs"
               className="mx-auto w-full max-w-sm rounded-lg object-cover lg:max-w-md"
+              sizes="(max-width: 1024px) 100vw, 448px"
             />
           </div>
         </div>

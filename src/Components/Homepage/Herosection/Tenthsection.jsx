@@ -69,6 +69,7 @@ const Tenthsection = () => {
     <SectionShell
       ariaLabelledby="impact-section-title"
       className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-[#051d4a] to-[#041636]"
+      belowFold
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(14,203,125,0.15),transparent)]"

@@ -18,6 +18,9 @@ export default {
       animation: {
         "fade-in-up": "fadeInUp 0.65s ease-out forwards",
       },
+      transitionDuration: {
+        DEFAULT: "200ms",
+      },
       keyframes: {
         fadeInUp: {
           "0%": { opacity: "0", transform: "translateY(16px)" },
