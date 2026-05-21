@@ -2,8 +2,8 @@
 export const ZEF_NAME = 'Zurfte Empowercare Foundation';
 export const ZEF_SHORT = 'ZEF';
 export const ZEF_EMAIL = 'info@zurfteempowercare.org';
-export const ZEF_WEBSITE = 'www.zurfteempowercare.org';
-export const ZEF_WEBSITE_URL = 'https://www.zurfteempowercare.org';
+export const ZEF_WEBSITE = 'zurfteempowercare.org';
+export const ZEF_WEBSITE_URL = 'https://zurfteempowercare.org';
 /** Official ZEF community Discord — used for volunteer & community CTAs */
 export const ZEF_DISCORD_URL = 'https://discord.gg/YG2HmkctZX';
 /** Stripe Checkout — donations (Support Our Mission) */

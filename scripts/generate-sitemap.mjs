@@ -1,18 +1,18 @@
 /**
- * Regenerates public/sitemap.xml from src/config/seo.js SITEMAP_PATHS.
- * Run: node scripts/generate-sitemap.mjs
+ * Regenerates public/sitemap.xml from canonical indexable routes.
+ * Run: npm run sitemap
  *
- * Note: SITEMAP_PATHS is duplicated here for zero build-deps; keep in sync with seo.js
- * or import after adding "type": "module" path alias in a future tooling pass.
+ * Hash homepage URLs are excluded — canonicals point at full routes (see canonical.js).
  */
 import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SITE_URL = 'https://www.zurfteempowercare.org';
+const SITE_ORIGIN = 'https://zurfteempowercare.org';
 const today = new Date().toISOString().slice(0, 10);
 
+/** Keep in sync with SITEMAP_PATHS in src/config/seo.js */
 const paths = [
   { path: '/', changefreq: 'weekly', priority: '1.0' },
   { path: '/about', changefreq: 'monthly', priority: '0.8' },
@@ -21,15 +21,14 @@ const paths = [
   { path: '/volunteer', changefreq: 'monthly', priority: '0.7' },
   { path: '/partnerships', changefreq: 'monthly', priority: '0.7' },
   { path: '/contact', changefreq: 'monthly', priority: '0.8' },
-  { path: '/#about-zef', changefreq: 'monthly', priority: '0.7' },
-  { path: '/#what-we-do', changefreq: 'monthly', priority: '0.8' },
-  { path: '/#community-events', changefreq: 'weekly', priority: '0.7' },
 ];
+
+const locForPath = (path) => (path === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${path}`);
 
 const urls = paths
   .map(
     ({ path, changefreq, priority }) => `  <url>
-    <loc>${SITE_URL}${path}</loc>
+    <loc>${locForPath(path)}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>

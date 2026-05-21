@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { buildCanonicalUrl } from '../../config/canonical';
 import {
   DEFAULT_OG_IMAGE,
   ORGANIZATION_JSON_LD,
   SEO_BY_HOME_HASH,
   SEO_BY_PATH,
-  SITE_URL,
 } from '../../config/seo';
 import { ZEF_NAME } from '../../config/branding';
 import {
@@ -37,9 +37,7 @@ export function PageSEO() {
     const ogType = routeSeo.ogType ?? 'website';
     const noindex = routeSeo.noindex ?? false;
 
-    const canonicalPath =
-      pathname === '/' && hashId ? `/#${hashId}` : pathname || '/';
-    const canonicalUrl = `${SITE_URL}${canonicalPath}`;
+    const canonicalUrl = buildCanonicalUrl(pathname, hash);
     const ogImage = routeSeo.ogImage ?? DEFAULT_OG_IMAGE;
 
     document.title = title;

@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Loader from './Components/Loader/Loader';
 import { ScrollToHash } from './Components/Homepage/shared/ScrollToHash';
+import { CanonicalRedirects } from './Components/seo/CanonicalRedirects';
 import { PageSEO } from './Components/seo/PageSEO';
 import { Analytics } from './lib/analytics';
 import { PageLoadFallback } from './Components/shared/PageLoadFallback';
@@ -47,6 +48,7 @@ function App() {
   return (
     <Router>
       <PageSEO />
+      <CanonicalRedirects />
       <Analytics />
       <ScrollToHash />
       <Navbar />
