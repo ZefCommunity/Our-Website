@@ -87,6 +87,14 @@ export const SEO_BY_PATH = {
     keywords: `nonprofit partnerships Nigeria, corporate social impact, community empowerment partners, ${SITE_KEYWORDS}`,
     ogType: 'website',
   },
+  '/pilots': {
+    canonicalPath: '/pilots',
+    title: `Pilot Programs: Early-Stage Youth & Community Initiatives ${titleSuffix}`,
+    description:
+      'Explore ZEF pilot programs: early-stage initiatives that test and scale digital skills, entrepreneurship, and innovation opportunities for youth and communities.',
+    keywords: `pilot programs, youth innovation pilots, community program pilots, ${SITE_KEYWORDS}`,
+    ogType: 'website',
+  },
   '/contact': {
     canonicalPath: '/contact',
     title: `Contact ${ZEF_SHORT} — Programs, Volunteering & Partnerships ${titleSuffix}`,
@@ -165,5 +173,6 @@ export const SITEMAP_PATHS = [
   { path: '/socialEvents', changefreq: 'weekly', priority: '0.8' },
   { path: '/volunteer', changefreq: 'monthly', priority: '0.7' },
   { path: '/partnerships', changefreq: 'monthly', priority: '0.7' },
+  { path: '/pilots', changefreq: 'monthly', priority: '0.8' },
   { path: '/contact', changefreq: 'monthly', priority: '0.8' },
 ];

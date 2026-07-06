@@ -20,6 +20,7 @@ export const PRIMARY_CANONICAL_PATHS = {
   volunteer: '/volunteer',
   community: '/socialEvents',
   partnerships: '/partnerships',
+  pilots: '/pilots',
   contact: '/contact',
 };
 

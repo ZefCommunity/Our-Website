@@ -87,6 +87,15 @@ const Navbar = () => {
           </li>
           <li className="border-t md:border-none">
             <Link
+              to="/pilots"
+              className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+              onClick={handleLinkClick}
+            >
+              Pilots
+            </Link>
+          </li>
+          <li className="border-t md:border-none">
+            <Link
               to={homeSectionPath(HOME_SECTIONS.events)}
               className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
               onClick={handleLinkClick}

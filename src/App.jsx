@@ -20,6 +20,7 @@ const BlogDetails = lazy(() => import('./Pages/BlogDetails/BlogDetails'));
 const Contact = lazy(() => import('./Pages/Contact/Contact'));
 const Volunteer = lazy(() => import('./Pages/Volunteer/Volunteer'));
 const Partnerships = lazy(() => import('./Pages/Partnerships/Partnerships'));
+const Pilots = lazy(() => import('./Pages/Pilots/Pilots'));
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -60,6 +61,7 @@ function App() {
           <Route path="/socialEvents" element={<SocialEvents />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/pilots" element={<Pilots />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogDetail" element={<BlogDetails />} />

@@ -2,6 +2,8 @@
 export const ZEF_NAME = 'Zurfte Empowercare Foundation';
 export const ZEF_SHORT = 'ZEF';
 export const ZEF_EMAIL = 'info@zurfteempowercare.org';
+/** Official email for pilot program applications and applicant communication */
+export const ZEF_PILOT_APPLICANT_EMAIL = 'zeta@zurfteempowercare.org';
 export const ZEF_WEBSITE = 'zurfteempowercare.org';
 export const ZEF_WEBSITE_URL = 'https://zurfteempowercare.org';
 /** Official ZEF community Discord — used for volunteer & community CTAs */

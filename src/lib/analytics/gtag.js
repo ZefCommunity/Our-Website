@@ -149,3 +149,27 @@ export function trackDonation(_params) {
   // TODO: implement donation tracking
   // trackEvent('donate', { value: _params.amount, currency: _params.currency });
 }
+
+/**
+ * Fires after a successful Pilot Interest Form submission.
+ * @param {{ pilot: string, user_type: string, source: string, state: string }} params
+ */
+export function trackPilotInterestSubmitted(params) {
+  if (!isAnalyticsEnabled()) {
+    return;
+  }
+
+  initGA();
+
+  trackEvent('pilot_interest_submitted', {
+    pilot: params.pilot,
+    user_type: params.user_type,
+    source: params.source,
+    state: params.state,
+  });
+
+  // TODO: conversion funnels, add pilot_page_view and pilot_form_start events
+  // to build a GA4 funnel (landing → form focus → submit).
+  // TODO: campaign attribution, merge UTM params (utm_source, utm_campaign)
+  // with source for multi-touch campaign reporting.
+}

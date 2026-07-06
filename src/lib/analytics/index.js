@@ -11,5 +11,6 @@ export {
   trackEvent,
   trackNewsletterSignup,
   trackPageView,
+  trackPilotInterestSubmitted,
   trackVolunteerConversion,
 } from './gtag';
