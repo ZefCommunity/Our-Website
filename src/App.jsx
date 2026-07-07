@@ -9,6 +9,7 @@ import { CanonicalRedirects } from './Components/seo/CanonicalRedirects';
 import { PageSEO } from './Components/seo/PageSEO';
 import { Analytics } from './lib/analytics';
 import { PageLoadFallback } from './Components/shared/PageLoadFallback';
+import NotFound from './Pages/NotFound/NotFound';
 import { APP_LOADER_MAX_MS } from './config/performance';
 
 // Route-level code splitting — homepage Layout stays eager for faster LCP
@@ -65,6 +66,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogDetail" element={<BlogDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />

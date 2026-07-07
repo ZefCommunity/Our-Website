@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   build: {
     // TODO: future code splitting enhancements — tune chunk sizes after adding prefetch
     rollupOptions: {

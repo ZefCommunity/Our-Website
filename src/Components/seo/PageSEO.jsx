@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { buildCanonicalUrl } from '../../config/canonical';
 import {
   DEFAULT_OG_IMAGE,
+  NOT_FOUND_SEO,
   ORGANIZATION_JSON_LD,
   SEO_BY_HOME_HASH,
   SEO_BY_PATH,
@@ -28,7 +29,8 @@ export function PageSEO() {
     const hashId = hash ? decodeURIComponent(hash.slice(1)) : '';
     const hashSeo =
       pathname === '/' && hashId ? SEO_BY_HOME_HASH[hashId] : null;
-    const routeSeo = SEO_BY_PATH[pathname] ?? SEO_BY_PATH['/'];
+    const isKnownRoute = pathname in SEO_BY_PATH;
+    const routeSeo = isKnownRoute ? SEO_BY_PATH[pathname] : NOT_FOUND_SEO;
 
     const title = hashSeo?.title ?? routeSeo.title ?? ZEF_NAME;
     const description =

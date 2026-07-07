@@ -122,6 +122,16 @@ export const SEO_BY_PATH = {
   },
 };
 
+/** Applied by PageSEO when the URL does not match a known route. */
+export const NOT_FOUND_SEO = {
+  title: `Page Not Found ${titleSuffix}`,
+  description:
+    'The page you requested could not be found. Return to Zurfte Empowercare Foundation to explore youth empowerment programs, events, and ways to get involved.',
+  keywords: SITE_KEYWORDS,
+  ogType: 'website',
+  noindex: true,
+};
+
 /** Homepage section hashes: refined titles when users land on /#section */
 export const SEO_BY_HOME_HASH = {
   [HOME_SECTIONS.about]: {
