@@ -24,7 +24,7 @@ const Fifthsection = () => {
     },
     {
       title: 'Mentorship & Leadership Circle',
-      date: '2nd July, 2026',
+      date: '2nd October, 2026',
       location: 'Microsoft Teams',
       image: fifth3,
     },
