@@ -27,7 +27,7 @@ function SocialEvents() {
       image: img3,
       title: 'Mentorship & Leadership Circle',
       time: '2:00 PM - 5:00 PM',
-      date: 'TBD 2026',
+      date: '2nd October, 2026',
       location: 'Community venue — details coming soon',
     },
     {
