@@ -1,11 +1,11 @@
 ﻿import { Link } from "react-router-dom";
-import Progress from "../Components/ProgressBar";
+import Progress from "../components/ProgressBar";
 import heroBg from "../assets/images/backgrounds/hero2.png";
 import cause1 from "../assets/images/latest-causes/case1.png";
 import cause2 from "../assets/images/latest-causes/case2.png";
 import cause3 from "../assets/images/latest-causes/case3.png";
-import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const LatestCauses = () => {
   return (

@@ -1,14 +1,14 @@
 ﻿import { lazy, Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Layout from './Components/Homepage/Layout/Layout';
-import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer';
-import Loader from './Components/Loader/Loader';
-import { ScrollToHash } from './Components/Homepage/shared/ScrollToHash';
-import { CanonicalRedirects } from './Components/seo/CanonicalRedirects';
-import { PageSEO } from './Components/seo/PageSEO';
+import Layout from './components/Homepage/Layout/Layout';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Loader from './components/Loader/Loader';
+import { ScrollToHash } from './components/Homepage/shared/ScrollToHash';
+import { CanonicalRedirects } from './components/seo/CanonicalRedirects';
+import { PageSEO } from './components/seo/PageSEO';
 import { Analytics } from './lib/analytics';
-import { PageLoadFallback } from './Components/shared/PageLoadFallback';
+import { PageLoadFallback } from './components/shared/PageLoadFallback';
 import NotFound from './Pages/NotFound/NotFound';
 import { APP_LOADER_MAX_MS } from './config/performance';
 

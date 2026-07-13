@@ -1,4 +1,4 @@
-import { CTA_PRIMARY, SECTION_CONTAINER } from '../../../Components/Homepage/shared/sectionUi';
+import { CTA_PRIMARY, SECTION_CONTAINER } from '../../../components/Homepage/shared/sectionUi';
 import { PILOTS_PAGE } from '../pilotsContent';
 
 function HeroSection() {

@@ -4,7 +4,7 @@ import img2 from '../../assets/img/gallery/socialEvents2.png';
 import img3 from '../../assets/img/gallery/socialEvents3.png';
 import img4 from '../../assets/img/gallery/socialEvents2.png';
 import img5 from '../../assets/img/gallery/socialEvents1.png';
-import Tenthsection from '../../Components/Homepage/Herosection/Tenthsection';
+import Tenthsection from '../../components/Homepage/Herosection/Tenthsection';
 
 // TODO: Replace with live events from CMS or events API
 function SocialEvents() {

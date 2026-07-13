@@ -1,5 +1,5 @@
 import { FaInfoCircle } from 'react-icons/fa';
-import { SectionShell } from '../../../Components/Homepage/shared/SectionShell';
+import { SectionShell } from '../../../components/Homepage/shared/SectionShell';
 import { COMMUNICATION_POLICY } from '../pilotsContent';
 
 function CommunicationPolicyNotice() {

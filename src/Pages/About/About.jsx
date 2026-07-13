@@ -2,8 +2,8 @@
 import { FaCog, FaBrain, FaDesktop } from 'react-icons/fa';
 import img1 from '../../assets/img/gallery/about2.png';
 import img2 from '../../assets/img/gallery/about1.png';
-import Eightsection from '../../Components/Homepage/Herosection/Eightsection';
-import Tenthsection from '../../Components/Homepage/Herosection/Tenthsection';
+import Eightsection from '../../components/Homepage/Herosection/Eightsection';
+import Tenthsection from '../../components/Homepage/Herosection/Tenthsection';
 
 function About() {
   const cards = [
