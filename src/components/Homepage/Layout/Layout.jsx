@@ -1,10 +1,11 @@
-﻿import React from 'react';
+﻿import React from "react";
 
-import Firstsection from '../Herosection/Firstsection';
-import Secondsection from '../Herosection/Secondsection';
-import Thirdsection from '../Herosection/Thirdsection';
-import Fifthsection from '../Herosection/Fifthsection';
-import Tenthsection from '../Herosection/Tenthsection';
+import Firstsection from "../Herosection/Firstsection";
+import Secondsection from "../Herosection/Secondsection";
+import Thirdsection from "../Herosection/Thirdsection";
+import Fifthsection from "../Herosection/Fifthsection";
+import Tenthsection from "../Herosection/Tenthsection";
+import Partnerships from "@/Pages/Partnerships/Partnerships";
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
     >
       <Firstsection />
       <Thirdsection />
+      <Partnerships />
       <Secondsection />
       <Tenthsection />
       <Fifthsection />

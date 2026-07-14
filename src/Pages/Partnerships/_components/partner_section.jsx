@@ -9,8 +9,8 @@ import {
 
 export default function PartnerSection({ data, dir, title }) {
   return (
-    <section>
-      <div className="w-fit max-w-2xl">
+    <section className="w-full flex justify-center">
+      <div className="w-fit max-w-2xl max-md:w-full">
         <p className={cn(" mt-6 font-bold", dir)}>{title}</p>
 
         {/* Shadcn Carousel + Embla Carousel */}
