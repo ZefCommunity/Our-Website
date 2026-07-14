@@ -16,9 +16,9 @@ const Layout = () => {
     >
       <Firstsection />
       <Thirdsection />
-      <Partnerships />
       <Secondsection />
       <Tenthsection />
+      <Partnerships />
       <Fifthsection />
     </main>
   );
