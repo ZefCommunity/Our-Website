@@ -1,5 +1,5 @@
 import { FaCheck } from 'react-icons/fa';
-import { CtaLink } from '../../../Components/Homepage/shared/CtaLink';
+import { CtaLink } from '../../../components/Homepage/shared/CtaLink';
 import { ZEF_PILOT_APPLICANT_EMAIL } from '../../../config/branding';
 import { INTEREST_FORM_SUCCESS_COPY } from '../pilotsContent';
 

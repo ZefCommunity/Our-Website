@@ -1,6 +1,6 @@
-import { SectionHeader } from '../../../Components/Homepage/shared/SectionHeader';
-import { SectionShell } from '../../../Components/Homepage/shared/SectionShell';
-import { SECTION_CONTENT_GAP } from '../../../Components/Homepage/shared/sectionUi';
+import { SectionHeader } from '../../../components/Homepage/shared/SectionHeader';
+import { SectionShell } from '../../../components/Homepage/shared/SectionShell';
+import { SECTION_CONTENT_GAP } from '../../../components/Homepage/shared/sectionUi';
 import { PROMISE_CONTENT } from '../pilotsContent';
 
 function PromiseSection() {

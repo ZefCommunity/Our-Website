@@ -1,10 +1,10 @@
-import { CtaLink } from '../../Components/Homepage/shared/CtaLink';
-import { SectionHeader } from '../../Components/Homepage/shared/SectionHeader';
-import { SectionShell } from '../../Components/Homepage/shared/SectionShell';
+import { CtaLink } from '../../components/Homepage/shared/CtaLink';
+import { SectionHeader } from '../../components/Homepage/shared/SectionHeader';
+import { SectionShell } from '../../components/Homepage/shared/SectionShell';
 import {
   SECTION_CONTAINER,
   SECTION_CONTENT_GAP,
-} from '../../Components/Homepage/shared/sectionUi';
+} from '../../components/Homepage/shared/sectionUi';
 
 const QUICK_LINKS = [
   { label: 'About ZEF', to: '/about' },
