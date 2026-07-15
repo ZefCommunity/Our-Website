@@ -21,16 +21,7 @@ function Partnerships() {
           and expand our impact.
         </p>
       </div>
-      <PartnerSection
-        data={VOLUNTEERS_DATA}
-        dir="text-start"
-        title="Volunteer & Community Ecosystem"
-      />
-      <PartnerSection
-        data={SUPPORTERS_DATA}
-        dir="text-start"
-        title="Technology Supporters"
-      />
+      <PartnerSection data={[...VOLUNTEERS_DATA, ...SUPPORTERS_DATA]} />
     </main>
   );
 }
