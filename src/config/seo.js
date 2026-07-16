@@ -144,6 +144,11 @@ export const SEO_BY_HOME_HASH = {
     description:
       'Discover ZEF core programs: digital skills training, entrepreneurship development, innovation and solution building, and mentorship for young people.',
   },
+  [HOME_SECTIONS.ecosystem]: {
+    title: `Our Ecosystem & Support Network ${titleSuffix}`,
+    description:
+      'Explore the volunteer community ecosystem and technology supporters that help Zurfte Empowercare Foundation strengthen operations and expand impact.',
+  },
   [HOME_SECTIONS.events]: {
     title: `Community Events — Learn, Connect & Grow ${titleSuffix}`,
     description:
