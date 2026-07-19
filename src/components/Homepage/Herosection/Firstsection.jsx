@@ -1,12 +1,12 @@
-﻿import HeroImage from '../../../assets/image1.png';
-import { OptimizedImage } from '../../shared/OptimizedImage';
-import { ZEF_DISCORD_URL, ZEF_TAGLINE } from '../../../config/branding';
+﻿import HeroImage from "../../../assets/image1.png";
+import { OptimizedImage } from "../../shared/OptimizedImage";
+import { ZEF_TAGLINE } from "../../../config/branding";
 import {
   HOME_SECTIONS,
   homeSectionPath,
-} from '../../../config/homepageSections';
-import { CtaLink } from '../shared/CtaLink';
-import { SECTION_CONTAINER } from '../shared/sectionUi';
+} from "../../../config/homepageSections";
+import { CtaLink } from "../shared/CtaLink";
+import { SECTION_CONTAINER } from "../shared/sectionUi";
 
 const Firstsection = () => {
   return (
@@ -34,9 +34,6 @@ const Firstsection = () => {
           <div className="flex flex-wrap items-center gap-3 pt-2 sm:gap-4">
             <CtaLink to={homeSectionPath(HOME_SECTIONS.programs)}>
               Explore Our Programs
-            </CtaLink>
-            <CtaLink href={ZEF_DISCORD_URL} variant="secondary">
-              Become a Volunteer
             </CtaLink>
           </div>
         </div>
