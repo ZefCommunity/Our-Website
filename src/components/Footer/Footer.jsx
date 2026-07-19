@@ -1,16 +1,13 @@
-﻿import { Link } from 'react-router-dom';
-import { FaEnvelope } from 'react-icons/fa';
+﻿import { Link } from "react-router-dom";
+import { FaEnvelope } from "react-icons/fa";
 import {
   ZEF_EMAIL,
   ZEF_NAME,
   ZEF_SHORT,
-  ZEF_DISCORD_URL,
   ZEF_TAGLINE,
-} from '../../config/branding';
-import {
-  HOME_SECTIONS,
-  homeSectionPath,
-} from '../../config/homepageSections';
+  ZEF_DONATE_URL,
+} from "../../config/branding";
+import { HOME_SECTIONS, homeSectionPath } from "../../config/homepageSections";
 
 const Footer = () => {
   return (
@@ -83,6 +80,14 @@ const Footer = () => {
                 Contact Us
               </Link>
             </li>
+            <li className="mt-2">
+              <Link
+                to="/volunteer"
+                className="text-sm text-gray-300 hover:text-green-500 transition"
+              >
+                Become a Volunteer
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -93,12 +98,12 @@ const Footer = () => {
             initiatives, and empowerment opportunities.
           </p>
           <a
-            href={ZEF_DISCORD_URL}
+            href={ZEF_DONATE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition-colors"
           >
-            Join Our Community
+            Support Our Mission
           </a>
         </div>
       </div>
@@ -106,7 +111,7 @@ const Footer = () => {
       <div className="border-t border-gray-700 mt-8 pt-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4">
           <p className="text-sm text-center md:text-left">
-            {'\u00A9 '}
+            {"\u00A9 "}
             {new Date().getFullYear()} {ZEF_NAME}. All rights reserved.
           </p>
           {/* TODO: Replace # with official ZEF social media profile URLs */}
@@ -140,4 +145,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

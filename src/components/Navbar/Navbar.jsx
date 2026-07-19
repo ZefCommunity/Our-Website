@@ -1,11 +1,8 @@
-﻿import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import zeflogo from '../../assets/zeflogo.png';
-import { ZEF_DONATE_URL, ZEF_SHORT } from '../../config/branding';
-import {
-  HOME_SECTIONS,
-  homeSectionPath,
-} from '../../config/homepageSections';
+﻿import { useState } from "react";
+import { Link } from "react-router-dom";
+import zeflogo from "../../assets/zeflogo.png";
+import { ZEF_DONATE_URL, ZEF_SHORT } from "../../config/branding";
+import { HOME_SECTIONS, homeSectionPath } from "../../config/homepageSections";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +30,7 @@ const Navbar = () => {
           type="button"
           aria-label="Toggle Menu"
           className={`md:hidden text-gray-700 transform transition-transform ${
-            isMenuOpen ? 'rotate-45' : ''
+            isMenuOpen ? "rotate-45" : ""
           }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -55,7 +52,7 @@ const Navbar = () => {
 
         <ul
           className={`md:flex md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none transition-all duration-300 ${
-            isMenuOpen ? 'block' : 'hidden'
+            isMenuOpen ? "block" : "hidden"
           }`}
         >
           <li className="border-t md:border-none">
@@ -110,6 +107,15 @@ const Navbar = () => {
               onClick={handleLinkClick}
             >
               Contact
+            </Link>
+          </li>
+          <li className="border-t md:border-none">
+            <Link
+              to="/volunteer"
+              className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
+              onClick={handleLinkClick}
+            >
+              Become a Volunteer
             </Link>
           </li>
           <li className="border-t md:hidden">
