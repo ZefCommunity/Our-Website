@@ -109,15 +109,6 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <li className="border-t md:border-none">
-            <Link
-              to="/volunteer"
-              className="block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]"
-              onClick={handleLinkClick}
-            >
-              Become a Volunteer
-            </Link>
-          </li>
           <li className="border-t md:hidden">
             <a
               href={ZEF_DONATE_URL}
