@@ -45,7 +45,7 @@ export default function UploadBox({ control }) {
               </div>
               <h1 className="text-2xl font-semibold">
                 {" "}
-                Drag & drop your resum file
+                Drag & drop your resume file
               </h1>
               <p className="text-gray-400 text-base">
                 or click to browse .docx, .doc and .pdf up to 10MB
@@ -56,7 +56,7 @@ export default function UploadBox({ control }) {
                     <span>{file.name}</span>
                   </div>
                   <div>
-                    <span>{(file.size / (1024 * 1024)).toFixed(2)}MP</span>
+                    <span>{(file.size / (1024 * 1024)).toFixed(2)}MB</span>
                   </div>
                 </div>
               )}
