@@ -181,11 +181,14 @@ function Volunteer() {
                 {/* LinkedIn */}
                 <FieldGroup className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <Field>
-                    <FieldLabel>LinkedIn (Optional)</FieldLabel>
+                    <FieldLabel>LinkedIn</FieldLabel>
                     <Input
                       {...register("linkedin")}
                       placeholder="LinkedIn URL"
                     />
+                    {errors.linkedin && (
+                      <FieldError errors={[errors.linkedin]} />
+                    )}
                   </Field>
                   <Controller
                     name="interest"

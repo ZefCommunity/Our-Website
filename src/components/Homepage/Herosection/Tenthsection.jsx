@@ -56,6 +56,7 @@ const Tenthsection = () => {
     <SectionShell
       ariaLabelledby="impact-section-title"
       className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-[#051d4a] to-[#041636]"
+      containerClassName="px-6 sm:px-8 lg:px-12"
       belowFold
     >
       <div

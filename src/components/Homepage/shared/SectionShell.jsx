@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { SECTION_CONTAINER, SECTION_PY, SECTION_SCROLL_MARGIN } from './sectionUi';
 
 export function SectionShell({
@@ -16,7 +17,7 @@ export function SectionShell({
       aria-labelledby={ariaLabelledby}
       className={`${noPadding ? '' : SECTION_PY} ${id ? SECTION_SCROLL_MARGIN : ''} ${belowFold ? 'content-visibility-section' : ''} ${className}`.trim()}
     >
-      <div className={`${SECTION_CONTAINER} ${containerClassName}`.trim()}>
+      <div className={cn(SECTION_CONTAINER, containerClassName)}>
         {children}
       </div>
     </Tag>

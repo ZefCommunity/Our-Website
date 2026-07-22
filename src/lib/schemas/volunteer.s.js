@@ -16,7 +16,7 @@ export const volunteer_schema = z.object({
   country: z.string().min(1, "Select your country"),
   city: z.string().min(1, "Select your city"),
   phone: z.e164({ error: "Please provide us a valid phone number" }),
-  linkedin: z.url().optional(),
+  linkedin: z.url({ error: "Linkedin profile is required" }),
   interest: z.string().min(1, "Select a department you are interested in"),
   motivation: z
     .string()

@@ -2,6 +2,7 @@
 export const HOME_SECTIONS = {
   about: 'about-zef',
   programs: 'what-we-do',
+  ecosystem: 'ecosystem-support',
   events: 'community-events',
 };
 
