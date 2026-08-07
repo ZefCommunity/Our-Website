@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Loader from './components/Loader/Loader';
 import { ScrollToHash } from './components/Homepage/shared/ScrollToHash';
+import { ScrollToTop } from './components/shared/ScrollToTop';
 import { CanonicalRedirects } from './components/seo/CanonicalRedirects';
 import { PageSEO } from './components/seo/PageSEO';
 import { Analytics } from './lib/analytics';
@@ -22,6 +23,7 @@ const Contact = lazy(() => import('./Pages/Contact/Contact'));
 const Volunteer = lazy(() => import('./Pages/Volunteer/Volunteer'));
 const Partnerships = lazy(() => import('./Pages/Partnerships/Partnerships'));
 const Pilots = lazy(() => import('./Pages/Pilots/Pilots'));
+const Enroll = lazy(() => import('./Pages/Enroll/Enroll'));
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +54,7 @@ function App() {
       <PageSEO />
       <CanonicalRedirects />
       <Analytics />
+      <ScrollToTop />
       <ScrollToHash />
       <Navbar />
       <Suspense fallback={<PageLoadFallback />}>
@@ -63,6 +66,7 @@ function App() {
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/pilots" element={<Pilots />} />
+          <Route path="/enroll" element={<Enroll />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogDetail" element={<BlogDetails />} />

@@ -1,33 +1,36 @@
-import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { useWatch } from 'react-hook-form';
+import FormSelect from '@/components/forms/FormSelect';
+import { FieldLabel } from '@/components/ui/field';
 
-import { useWatch } from "react-hook-form";
-
-export default function SelectCity({ value, onChange, countries, control }) {
-  // useWatch
-  const country = useWatch({ control, name: "country" });
+export default function SelectCity({
+  value,
+  onChange,
+  countries,
+  control,
+  disabled = false,
+  invalid = false,
+  id = 'volunteer-city',
+  showLabel = true,
+}) {
+  const country = useWatch({ control, name: 'country' });
+  const options = countries[country]?.cities ?? [];
 
   return (
-    <Select value={value} onValueChange={onChange}>
-      <SelectTrigger className="w-full max-w-full">
-        <SelectValue placeholder="Select a City" />
-      </SelectTrigger>
-      <SelectContent className="bg-white border-none">
-        <SelectGroup className="border-none">
-          {countries[country]?.cities.map((city) => (
-            <SelectItem className="hover:bg-slate-50" key={city} value={city}>
-              {city}
-            </SelectItem>
-          ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <>
+      {showLabel ? (
+        <FieldLabel htmlFor={id}>
+          City <span className="text-red-600">*</span>
+        </FieldLabel>
+      ) : null}
+      <FormSelect
+        id={id}
+        value={value}
+        onChange={onChange}
+        options={options}
+        placeholder={country ? 'Select a city' : 'Select a country first'}
+        disabled={disabled || !country}
+        invalid={invalid}
+      />
+    </>
   );
 }

@@ -1,32 +1,45 @@
-import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { useMemo } from 'react';
+import FormSelect from '@/components/forms/FormSelect';
+import { FieldLabel } from '@/components/ui/field';
 
-export default function SelectCountry({ countries, value, onChange }) {
+function prioritizeNigeria(countries = []) {
+  return [...countries].sort((a, b) => {
+    if (a.country === 'Nigeria') return -1;
+    if (b.country === 'Nigeria') return 1;
+    return a.country.localeCompare(b.country);
+  });
+}
+
+export default function SelectCountry({
+  countries,
+  value,
+  onChange,
+  disabled = false,
+  invalid = false,
+  id = 'volunteer-country',
+  showLabel = true,
+}) {
+  const options = useMemo(
+    () => prioritizeNigeria(countries).map((item) => item.country),
+    [countries],
+  );
+
   return (
-    <Select value={value} onValueChange={onChange}>
-      <SelectTrigger className="w-full max-w-full">
-        <SelectValue placeholder="Select a Country" />
-      </SelectTrigger>
-      <SelectContent className="bg-white border-none">
-        <SelectGroup className="border-none">
-          {countries.map((country) => (
-            <SelectItem
-              className="hover:bg-slate-50"
-              key={country.iso2}
-              value={country.country}
-            >
-              {country.country}
-            </SelectItem>
-          ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <>
+      {showLabel ? (
+        <FieldLabel htmlFor={id}>
+          Country <span className="text-red-600">*</span>
+        </FieldLabel>
+      ) : null}
+      <FormSelect
+        id={id}
+        value={value}
+        onChange={onChange}
+        options={options}
+        placeholder="Select a country"
+        disabled={disabled}
+        invalid={invalid}
+      />
+    </>
   );
 }

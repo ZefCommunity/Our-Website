@@ -118,15 +118,22 @@ export function trackCTAClick(_params) {
   // trackEvent('cta_click', { cta_id: _params.cta_id, ... });
 }
 
-// TODO: volunteer conversion tracking — fire after successful volunteer form submit
-// (Contact variant=volunteer) with form_type and optional campaign source.
-
 /**
- * @param {{ form_type?: string, page_path?: string }} _params
+ * Fires after a successful Volunteer Application submission.
+ * @param {{ interest?: string, country?: string, page_path?: string }} params
  */
-export function trackVolunteerConversion(_params) {
-  // TODO: implement volunteer conversion tracking
-  // trackEvent('volunteer_submit', { ... });
+export function trackVolunteerConversion(params = {}) {
+  if (!isAnalyticsEnabled()) {
+    return;
+  }
+
+  initGA();
+
+  trackEvent('volunteer_submit', {
+    interest: params.interest,
+    country: params.country,
+    page_path: params.page_path || getPagePath(),
+  });
 }
 
 // TODO: newsletter tracking — fire when newsletter signup is implemented
@@ -172,4 +179,22 @@ export function trackPilotInterestSubmitted(params) {
   // to build a GA4 funnel (landing → form focus → submit).
   // TODO: campaign attribution, merge UTM params (utm_source, utm_campaign)
   // with source for multi-touch campaign reporting.
+}
+
+/**
+ * Fires after a successful Enroll EOI form submission.
+ * @param {{ interest_count: number, learning_preference: string, country: string }} params
+ */
+export function trackEnrollEoiSubmitted(params) {
+  if (!isAnalyticsEnabled()) {
+    return;
+  }
+
+  initGA();
+
+  trackEvent('enroll_eoi_submitted', {
+    interest_count: params.interest_count,
+    learning_preference: params.learning_preference,
+    country: params.country,
+  });
 }

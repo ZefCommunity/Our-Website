@@ -1,7 +1,17 @@
-import { useWatch } from "react-hook-form";
+import { useWatch } from 'react-hook-form';
 
-export default function CharCounter({ control }) {
-  const chars = useWatch({ control, name: "motivation" });
+export default function CharCounter({ control, max = 1000 }) {
+  const chars = useWatch({ control, name: 'motivation' }) || '';
+  const count = chars.length;
+  const nearLimit = count > max * 0.9;
 
-  return <div className="w-full text-right">{chars.length}/1000</div>;
+  return (
+    <p
+      className={`w-full text-right text-sm ${
+        nearLimit ? 'text-amber-600' : 'text-slate-500'
+      }`}
+    >
+      {count}/{max}
+    </p>
+  );
 }

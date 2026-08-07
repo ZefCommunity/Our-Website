@@ -8,6 +8,7 @@ export {
   initGA,
   trackCTAClick,
   trackDonation,
+  trackEnrollEoiSubmitted,
   trackEvent,
   trackNewsletterSignup,
   trackPageView,

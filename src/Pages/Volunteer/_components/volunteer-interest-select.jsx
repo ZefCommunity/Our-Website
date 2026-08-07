@@ -1,91 +1,47 @@
-import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import FormSelect from '@/components/forms/FormSelect';
 
 const departmentOptions = [
+  { label: 'Administration', value: 'Administration' },
+  { label: 'Human Resources', value: 'Human Resources' },
   {
-    label: "Administration",
-    value: "administration",
+    label: 'Social Media & Communications',
+    value: 'Social Media & Communications',
+  },
+  { label: 'Graphics & Design', value: 'Graphics & Design' },
+  {
+    label: 'Programs & Community Development',
+    value: 'Programs & Community Development',
   },
   {
-    label: "Human Resources",
-    value: "human-resources",
+    label: 'Partnerships & Fundraising',
+    value: 'Partnerships & Fundraising',
   },
-  {
-    label: "Social Media & Communications",
-    value: "social-media-communications",
-  },
-  {
-    label: "Graphics & Design",
-    value: "graphics-design",
-  },
-  {
-    label: "Programs & Community Development",
-    value: "programs-community-development",
-  },
-  {
-    label: "Partnerships & Fundraising",
-    value: "partnerships-fundraising",
-  },
-  {
-    label: "Technology / IT",
-    value: "technology-it",
-  },
-  {
-    label: "Product & Innovation",
-    value: "product-innovation",
-  },
-  {
-    label: "Research & Monitoring",
-    value: "research-monitoring",
-  },
-  {
-    label: "Finance",
-    value: "finance",
-  },
-  {
-    label: "Legal & Compliance",
-    value: "legal-compliance",
-  },
-  {
-    label: "Content & Documentation",
-    value: "content-documentation",
-  },
-  {
-    label: "Marketing",
-    value: "marketing",
-  },
-  {
-    label: "Other",
-    value: "other",
-  },
+  { label: 'Technology / IT', value: 'Technology / IT' },
+  { label: 'Product & Innovation', value: 'Product & Innovation' },
+  { label: 'Research & Monitoring', value: 'Research & Monitoring' },
+  { label: 'Finance', value: 'Finance' },
+  { label: 'Legal & Compliance', value: 'Legal & Compliance' },
+  { label: 'Content & Documentation', value: 'Content & Documentation' },
+  { label: 'Marketing', value: 'Marketing' },
+  { label: 'Other', value: 'Other' },
 ];
 
-export default function VolunteerInterestSelect({ value, onChange }) {
+export default function VolunteerInterestSelect({
+  value,
+  onChange,
+  disabled = false,
+  invalid = false,
+  id = 'volunteer-interest',
+}) {
   return (
-    <Select value={value} onValueChange={onChange}>
-      <SelectTrigger className="w-full max-w-full">
-        <SelectValue placeholder="Select a Department" />
-      </SelectTrigger>
-      <SelectContent className="bg-white border-none">
-        <SelectGroup className="border-none">
-          {departmentOptions.map((item) => (
-            <SelectItem
-              className="hover:bg-slate-50"
-              key={item.value}
-              value={item.label}
-            >
-              {item.label}
-            </SelectItem>
-          ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <FormSelect
+      id={id}
+      value={value}
+      onChange={onChange}
+      options={departmentOptions}
+      placeholder="Select a department"
+      disabled={disabled}
+      invalid={invalid}
+    />
   );
 }

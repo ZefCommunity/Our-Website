@@ -95,6 +95,14 @@ export const SEO_BY_PATH = {
     keywords: `pilot programs, youth innovation pilots, community program pilots, ${SITE_KEYWORDS}`,
     ogType: 'website',
   },
+  '/enroll': {
+    canonicalPath: '/enroll',
+    title: `Enroll — Register Interest in Digital Skills Training ${titleSuffix}`,
+    description:
+      'Register your interest in ZEF training programs. Tell us which digital skills, entrepreneurship, and professional development courses you want to learn.',
+    keywords: `enroll ZEF, digital skills training interest, course expression of interest, ${SITE_KEYWORDS}`,
+    ogType: 'website',
+  },
   '/contact': {
     canonicalPath: '/contact',
     title: `Contact ${ZEF_SHORT} — Programs, Volunteering & Partnerships ${titleSuffix}`,
@@ -189,5 +197,6 @@ export const SITEMAP_PATHS = [
   { path: '/volunteer', changefreq: 'monthly', priority: '0.7' },
   { path: '/partnerships', changefreq: 'monthly', priority: '0.7' },
   { path: '/pilots', changefreq: 'monthly', priority: '0.8' },
+  { path: '/enroll', changefreq: 'monthly', priority: '0.9' },
   { path: '/contact', changefreq: 'monthly', priority: '0.8' },
 ];

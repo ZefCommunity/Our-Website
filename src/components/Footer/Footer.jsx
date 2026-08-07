@@ -80,6 +80,14 @@ const Footer = () => {
                 Become a Volunteer
               </Link>
             </li>
+            <li className="mt-2">
+              <Link
+                to="/enroll"
+                className="text-sm text-gray-300 hover:text-green-500 transition"
+              >
+                Enroll
+              </Link>
+            </li>
           </ul>
         </div>
 

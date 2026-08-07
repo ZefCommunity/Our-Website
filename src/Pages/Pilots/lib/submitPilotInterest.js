@@ -1,4 +1,5 @@
 import { PILOT_INTEREST_WEBHOOK_URL } from '../../../config/forms';
+import { submitGoogleSheetWebhook } from '../../../lib/forms/submitGoogleSheetWebhook';
 
 const DEFAULT_SOURCE = 'direct';
 
@@ -19,29 +20,6 @@ export function buildPilotInterestPayload(values, source = DEFAULT_SOURCE) {
   };
 }
 
-function parseWebhookResponse(text) {
-  if (!text?.trim()) {
-    return { ok: true };
-  }
-
-  try {
-    const data = JSON.parse(text);
-    if (data.success === false || data.result === 'error') {
-      return {
-        ok: false,
-        message:
-          typeof data.message === 'string'
-            ? data.message
-            : 'We could not submit your interest. Please try again.',
-      };
-    }
-    return { ok: true };
-  } catch {
-    // GAS may return plain text on success
-    return { ok: true };
-  }
-}
-
 /**
  * POST pilot interest data to the Google Apps Script webhook.
  * Uses text/plain to avoid CORS preflight with Apps Script deployments.
@@ -49,23 +27,10 @@ function parseWebhookResponse(text) {
 export async function submitPilotInterest(values, source) {
   const payload = buildPilotInterestPayload(values, source);
 
-  const response = await fetch(PILOT_INTEREST_WEBHOOK_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'text/plain;charset=utf-8',
-    },
-    body: JSON.stringify(payload),
+  await submitGoogleSheetWebhook(PILOT_INTEREST_WEBHOOK_URL, payload, {
+    errorMessage:
+      'We could not submit your interest. Please try again in a moment.',
   });
-
-  const text = await response.text().catch(() => '');
-  const result = parseWebhookResponse(text);
-
-  if (!response.ok || !result.ok) {
-    throw new Error(
-      result.message ||
-        'We could not submit your interest. Please try again in a moment.',
-    );
-  }
 
   return payload;
 }
