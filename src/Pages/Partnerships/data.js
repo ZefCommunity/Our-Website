@@ -24,6 +24,15 @@ export const SUPPORTERS_DATA = [
     category: 'Technology Supporters',
     logoPanelClassName: 'bg-slate-900',
   },
+  {
+    id: 'canva-for-nonprofits',
+    name: 'Canva for Nonprofits',
+    description:
+      'Canva for Nonprofits supports Zurfte Empowercare Foundation by providing complimentary access to Canva Pro, enabling our team to create professional designs, educational materials, social media content, presentations, and other visual communications that strengthen our programmes and amplify our impact.',
+    logo: '/partners/canva.svg',
+    link: 'https://www.canva.com/help/canva-for-nonprofits/',
+    category: 'Technology Support Partner',
+  },
 ];
 
 export const PARTNERS_DATA = [...VOLUNTEERS_DATA, ...SUPPORTERS_DATA];
