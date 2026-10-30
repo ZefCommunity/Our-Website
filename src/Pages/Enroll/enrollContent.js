@@ -1,16 +1,25 @@
+import {
+  PILOTS_PATH,
+  PROGRAMME_COMMENCEMENT_DATE,
+  PROGRAMME_PATHS_LABEL,
+  PROGRAMME_REGISTRATION_DEADLINE,
+} from '../../config/programmeRegistration';
+
 export const ENROLL_PAGE = {
   eyebrow: 'Expression of Interest',
-  heroTitle: 'Enrollment Is Now Open',
+  heroTitle: 'Enrolment Is Now Open',
   heroSubtitle: 'Ready to learn a new skill?',
-  heroDescription:
-    "Tell us what you'd like to learn. Register your interest today.",
+  heroDescription: `Register here for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}. The same programme is described on the Pilots page.`,
+  detailsPath: PILOTS_PATH,
+  detailsLabel: 'View programme details',
   heroCta: 'Register Your Interest',
+  registrationDeadline: PROGRAMME_REGISTRATION_DEADLINE,
+  commencementDate: PROGRAMME_COMMENCEMENT_DATE,
 };
 
 export const ENROLL_FORM_COPY = {
   title: 'Register Your Interest',
-  intro:
-    'Share your details and the skills you want to learn. This helps ZEF prioritize the training programs our community needs most.',
+  intro: `Register for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}. Share your details and the skills you want to learn. Register by ${PROGRAMME_REGISTRATION_DEADLINE}. The programme commences on ${PROGRAMME_COMMENCEMENT_DATE}.`,
   submitLabel: 'Submit Expression of Interest',
   submittingLabel: 'Submitting…',
   consentLabel:
@@ -24,7 +33,7 @@ export const ENROLL_SUCCESS_COPY = {
   detail: 'Please keep an eye on your inbox — we will reach out by email.',
   authenticityTitle: 'Stay safe from unofficial messages',
   authenticityBody:
-    'Zurfte Empowercare Foundation (ZEF) will never contact applicants through WhatsApp, Telegram, or direct messages. All official communication regarding applications and pilot programs will come exclusively from:',
+    'Zurfte Empowercare Foundation (ZEF) will never contact applicants through WhatsApp, Telegram, or direct messages. All official communication regarding applications and pilot programmes will come exclusively from:',
   authenticityFooter:
     'Please disregard messages from unofficial channels claiming to represent ZEF.',
   homeCta: 'Return to Home',

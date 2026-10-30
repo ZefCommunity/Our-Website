@@ -2,10 +2,10 @@ import CommunicationPolicyNotice from './components/CommunicationPolicyNotice';
 import {
   AudienceSection,
   HeroSection,
-  InterestFormSection,
   JoinStepsSection,
   PilotProgramsSection,
   PromiseSection,
+  RegistrationSection,
 } from './sections';
 
 function Pilots() {
@@ -17,7 +17,7 @@ function Pilots() {
       <AudienceSection />
       <PilotProgramsSection />
       <JoinStepsSection />
-      <InterestFormSection />
+      <RegistrationSection />
     </main>
   );
 }

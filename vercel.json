@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/enroll",
+      "destination": "/enrol",
+      "permanent": true
+    },
+    {
+      "source": "/enroll/",
+      "destination": "/enrol",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

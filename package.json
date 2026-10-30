@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sitemap": "node scripts/generate-sitemap.mjs"
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "test": "node --test tests/enrol-route.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

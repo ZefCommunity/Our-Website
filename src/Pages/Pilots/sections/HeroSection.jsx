@@ -1,4 +1,7 @@
-import { CTA_PRIMARY, SECTION_CONTAINER } from '../../../components/Homepage/shared/sectionUi';
+import { CtaLink } from '../../../components/Homepage/shared/CtaLink';
+import { SECTION_CONTAINER } from '../../../components/Homepage/shared/sectionUi';
+import { ProgrammeDates } from '../../../components/programme/ProgrammeDates';
+import { ENROL_PATH } from '../../../config/programmeRegistration';
 import { PILOTS_PAGE } from '../pilotsContent';
 
 function HeroSection() {
@@ -30,10 +33,12 @@ function HeroSection() {
           <p className="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
             {PILOTS_PAGE.heroSubtitle}
           </p>
+          <p className="mt-4 text-base leading-relaxed text-slate-300 sm:text-lg">
+            {PILOTS_PAGE.registrationNote}
+          </p>
+          <ProgrammeDates tone="dark" className="mx-auto mt-8 max-w-xl" />
           <div className="mt-10">
-            <a href="#interest-form" className={CTA_PRIMARY}>
-              {PILOTS_PAGE.heroCta}
-            </a>
+            <CtaLink to={ENROL_PATH}>{PILOTS_PAGE.heroCta}</CtaLink>
           </div>
         </div>
       </div>

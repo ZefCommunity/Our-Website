@@ -1,4 +1,4 @@
-﻿import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+﻿import { FaMapMarkerAlt } from 'react-icons/fa';
 import fifth1 from '../../../assets/fifth1.png';
 import fifth2 from '../../../assets/fifth2.png';
 import fifth3 from '../../../assets/fifth3.png';
@@ -12,19 +12,16 @@ const Fifthsection = () => {
   const events = [
     {
       title: 'Youth Innovation Workshop',
-      date: '7th – 14th September, 2026',
       location: 'Microsoft Teams',
       image: fifth1,
     },
     {
       title: 'Digital Skills Bootcamp',
-      date: '28th September, 2026',
       location: 'Microsoft Teams',
       image: fifth2,
     },
     {
       title: 'Mentorship & Leadership Circle',
-      date: '2nd October, 2026',
       location: 'Microsoft Teams',
       image: fifth3,
     },
@@ -37,8 +34,9 @@ const Fifthsection = () => {
       belowFold
     >
       <SectionHeader
-        eyebrow="Community events"
+        eyebrow="Community activities"
         title="Connecting Youth Through Learning, Mentorship, and Innovation"
+        description="These activities have already taken place."
       />
 
       {/* TODO: Replace with live events from CMS or events API */}
@@ -57,13 +55,6 @@ const Fifthsection = () => {
                   {event.title}
                 </h3>
                 <div className="mt-2 space-y-2 text-sm text-slate-600 sm:text-base">
-                  <div className="flex items-start gap-2 sm:items-center">
-                    <FaCalendarAlt
-                      className="mt-0.5 shrink-0 text-green-500 sm:mt-0"
-                      aria-hidden
-                    />
-                    <span>{event.date}</span>
-                  </div>
                   <div className="flex items-start gap-2 sm:items-center">
                     <FaMapMarkerAlt
                       className="mt-0.5 shrink-0 text-green-500 sm:mt-0"

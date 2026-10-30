@@ -26,9 +26,7 @@ function SocialEvents() {
     {
       image: img3,
       title: 'Mentorship & Leadership Circle',
-      time: '2:00 PM - 5:00 PM',
-      date: '2nd October, 2026',
-      location: 'Community venue — details coming soon',
+      status: 'This activity has already taken place.',
     },
     {
       image: img4,
@@ -81,20 +79,24 @@ function SocialEvents() {
                   <h2 className="text-xl font-semibold text-blue-950">
                     {event.title}
                   </h2>
-                  <div className="flex flex-col md:flex-row gap-[10px] md:gap-[50px]">
-                    <div className="flex gap-2 items-center">
-                      <FaClock />
-                      <p>{event.time}</p>
+                  {event.status ? (
+                    <p>{event.status}</p>
+                  ) : (
+                    <div className="flex flex-col md:flex-row gap-[10px] md:gap-[50px]">
+                      <div className="flex gap-2 items-center">
+                        <FaClock />
+                        <p>{event.time}</p>
+                      </div>
+                      <div className="flex gap-2 items-center">
+                        <FaCalendarAlt />
+                        <p>{event.date}</p>
+                      </div>
+                      <div className="flex gap-2 items-center">
+                        <FaMapMarkerAlt />
+                        <p>{event.location}</p>
+                      </div>
                     </div>
-                    <div className="flex gap-2 items-center">
-                      <FaCalendarAlt />
-                      <p>{event.date}</p>
-                    </div>
-                    <div className="flex gap-2 items-center">
-                      <FaMapMarkerAlt />
-                      <p>{event.location}</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             ))}

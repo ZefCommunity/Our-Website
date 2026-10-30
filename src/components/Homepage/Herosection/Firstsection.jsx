@@ -1,6 +1,8 @@
 ﻿import HeroImage from "../../../assets/image1.png";
 import { OptimizedImage } from "../../shared/OptimizedImage";
 import { ZEF_TAGLINE } from "../../../config/branding";
+import { ENROL_PATH } from "../../../config/programmeRegistration";
+import { ProgrammeDates } from "../../programme/ProgrammeDates";
 import {
   HOME_SECTIONS,
   homeSectionPath,
@@ -31,8 +33,16 @@ const Firstsection = () => {
           <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
             {ZEF_TAGLINE}
           </p>
+          <ProgrammeDates />
+          <p className="text-base leading-relaxed text-slate-600">
+            Register through the Enrol page.
+          </p>
           <div className="flex flex-wrap items-center gap-3 pt-2 sm:gap-4">
-            <CtaLink to={homeSectionPath(HOME_SECTIONS.programs)}>
+            <CtaLink to={ENROL_PATH}>Enrol</CtaLink>
+            <CtaLink
+              to={homeSectionPath(HOME_SECTIONS.programs)}
+              variant="secondary"
+            >
               Explore Our Programs
             </CtaLink>
           </div>

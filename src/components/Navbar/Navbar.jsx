@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import zeflogo from "../../assets/zeflogo.png";
 import { ZEF_DONATE_URL, ZEF_SHORT } from "../../config/branding";
 import { HOME_SECTIONS, homeSectionPath } from "../../config/homepageSections";
+import { ENROL_PATH } from "../../config/programmeRegistration";
 
 const NAV_LINK_CLASS =
   "block py-2 px-4 font-semibold text-gray-700 hover:text-[#0ecb7d]";
@@ -112,11 +113,11 @@ const Navbar = () => {
           </li>
           <li className="border-t md:hidden px-4 py-2 space-y-2">
             <Link
-              to="/enroll"
+              to={ENROL_PATH}
               className={`${CTA_ENROLL} w-full`}
               onClick={handleLinkClick}
             >
-              Enroll
+              Enrol
             </Link>
             <a
               href={ZEF_DONATE_URL}
@@ -131,8 +132,8 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden md:flex items-center gap-2 shrink-0">
-          <Link to="/enroll" className={CTA_ENROLL}>
-            Enroll
+          <Link to={ENROL_PATH} className={CTA_ENROLL}>
+            Enrol
           </Link>
           <a
             href={ZEF_DONATE_URL}

@@ -20,7 +20,7 @@ function JoinStepsSection() {
         titleId="pilots-join-title"
         eyebrow="How to join"
         title="Three simple steps to get started"
-        description="No lengthy application. Share your interest and our team will guide you from there."
+        description="Register once on the Enrol page. Our team will guide you from there."
       />
 
       <ol

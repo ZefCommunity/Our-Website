@@ -8,6 +8,7 @@ import {
   ZEF_DONATE_URL,
 } from "../../config/branding";
 import { HOME_SECTIONS, homeSectionPath } from "../../config/homepageSections";
+import { ENROL_PATH } from "../../config/programmeRegistration";
 
 const Footer = () => {
   return (
@@ -82,10 +83,10 @@ const Footer = () => {
             </li>
             <li className="mt-2">
               <Link
-                to="/enroll"
+                to={ENROL_PATH}
                 className="text-sm text-gray-300 hover:text-green-500 transition"
               >
-                Enroll
+                Enrol
               </Link>
             </li>
           </ul>

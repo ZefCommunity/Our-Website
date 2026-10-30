@@ -4,6 +4,7 @@ import img1 from '../../assets/img/gallery/about2.png';
 import img2 from '../../assets/img/gallery/about1.png';
 import Eightsection from '../../components/Homepage/Herosection/Eightsection';
 import Tenthsection from '../../components/Homepage/Herosection/Tenthsection';
+import { ZEF_MISSION, ZEF_VISION } from '../../config/branding';
 
 function About() {
   const cards = [
@@ -94,17 +95,15 @@ function About() {
                       About ZEF
                     </span>
                     <h2 className="text-5xl font-semibold text-blue-950 mx-auto mt-10">
-                      Our Mission: Opportunity Through Empowerment
+                      Our Mission
                     </h2>
                   </div>
+                  <p className="py-7">{ZEF_MISSION}</p>
+                  <h3 className="text-3xl font-semibold text-blue-950">
+                    Our Vision
+                  </h3>
+                  <p className="py-7">{ZEF_VISION}</p>
                   <p className="py-7">
-                    Zurfte Empowercare Foundation (ZEF) empowers youth and
-                    underserved communities through digital skills,
-                    entrepreneurship, mentorship, innovation, and
-                    community-driven opportunities.
-                  </p>
-                  <p className="py-7">
-                    {/* TODO: Replace with leadership-approved vision, history, and impact narrative */}
                     We collaborate with partners to deliver programs that build
                     confidence, capability, and pathways to a stronger future.
                   </p>

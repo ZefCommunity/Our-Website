@@ -27,6 +27,7 @@ import EnrollFormSuccess from '../components/EnrollFormSuccess';
 import EnrollLocationFields from '../components/EnrollLocationFields';
 import EnrollSelect from '../components/EnrollSelect';
 import { ENROLL_INPUT, ENROLL_TEXTAREA } from '../components/enrollFormUi';
+import { ProgrammeDates } from '../../../components/programme/ProgrammeDates';
 import { ENROLL_FORM_COPY } from '../enrollContent';
 import { submitEnrollEoi } from '../lib/submitEnrollEoi';
 
@@ -159,6 +160,7 @@ function EnrollFormSection() {
             title={ENROLL_FORM_COPY.title}
             description={ENROLL_FORM_COPY.intro}
           />
+          <ProgrammeDates className="mx-auto mt-8 max-w-3xl" />
 
           <div
             className={`mx-auto max-w-3xl rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-8 lg:p-10 ${SECTION_CONTENT_GAP}`}

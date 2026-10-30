@@ -21,6 +21,7 @@ export const PRIMARY_CANONICAL_PATHS = {
   community: '/socialEvents',
   partnerships: '/partnerships',
   pilots: '/pilots',
+  enrol: '/enrol',
   contact: '/contact',
 };
 
@@ -41,6 +42,7 @@ const PATH_ALIAS_TO_CANONICAL = {
   '/latestcause': PRIMARY_CANONICAL_PATHS.programs,
   '/socialevents': PRIMARY_CANONICAL_PATHS.community,
   '/blogdetail': '/blogDetail',
+  '/enroll': PRIMARY_CANONICAL_PATHS.enrol,
 };
 
 /**
@@ -57,6 +59,7 @@ export const ROUTE_DUPLICATE_NOTES = [
   'Programs route is /LatestCause (legacy name); sitemap and canonical use this path until a server redirect is added.',
   'Community route is /socialEvents (legacy name); same as programs.',
   'Blog routes are noindex; canonical still points to themselves.',
+  'Enrolment is /enrol. /enroll is a legacy alias and must redirect, including query and hash.',
 ];
 
 /**

@@ -9,6 +9,12 @@
 import { ZEF_EMAIL, ZEF_NAME, ZEF_SHORT } from './branding';
 import { SITE_ORIGIN } from './canonical';
 import { HOME_SECTIONS } from './homepageSections';
+import {
+  ENROL_PATH,
+  PROGRAMME_COMMENCEMENT_DATE,
+  PROGRAMME_PATHS_LABEL,
+  PROGRAMME_REGISTRATION_DEADLINE,
+} from './programmeRegistration';
 
 export const SITE_URL = SITE_ORIGIN;
 
@@ -36,7 +42,7 @@ const titleSuffix = `| ${ZEF_SHORT}`;
  *
  * Canonical URLs (via PageSEO + canonical.js):
  *   Home /, About /about, Programs /LatestCause, Volunteer /volunteer,
- *   Community /socialEvents, Partnerships /partnerships, Contact /contact
+ *   Community /socialEvents, Partnerships /partnerships, Enrol /enrol, Contact /contact
  */
 export const SEO_BY_PATH = {
   '/': {
@@ -89,18 +95,16 @@ export const SEO_BY_PATH = {
   },
   '/pilots': {
     canonicalPath: '/pilots',
-    title: `Pilot Programs: Early-Stage Youth & Community Initiatives ${titleSuffix}`,
-    description:
-      'Explore ZEF pilot programs: early-stage initiatives that test and scale digital skills, entrepreneurship, and innovation opportunities for youth and communities.',
-    keywords: `pilot programs, youth innovation pilots, community program pilots, ${SITE_KEYWORDS}`,
+    title: `Pilot Programme — ${PROGRAMME_PATHS_LABEL} ${titleSuffix}`,
+    description: `ZEF's pilot programme includes ${PROGRAMME_PATHS_LABEL}. Register by ${PROGRAMME_REGISTRATION_DEADLINE}. The programme commences on ${PROGRAMME_COMMENCEMENT_DATE}. Registration is on the Enrol page.`,
+    keywords: `pilot programme, ${PROGRAMME_PATHS_LABEL}, enrol ZEF, ${SITE_KEYWORDS}`,
     ogType: 'website',
   },
-  '/enroll': {
-    canonicalPath: '/enroll',
-    title: `Enroll — Register Interest in Digital Skills Training ${titleSuffix}`,
-    description:
-      'Register your interest in ZEF training programs. Tell us which digital skills, entrepreneurship, and professional development courses you want to learn.',
-    keywords: `enroll ZEF, digital skills training interest, course expression of interest, ${SITE_KEYWORDS}`,
+  [ENROL_PATH]: {
+    canonicalPath: ENROL_PATH,
+    title: `Enrol — Register Interest in Digital Skills Training ${titleSuffix}`,
+    description: `Register for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}, by ${PROGRAMME_REGISTRATION_DEADLINE}. The programme commences on ${PROGRAMME_COMMENCEMENT_DATE}.`,
+    keywords: `enrol ZEF, enroll ZEF, digital skills training interest, course expression of interest, ${SITE_KEYWORDS}`,
     ogType: 'website',
   },
   '/contact': {
@@ -160,7 +164,7 @@ export const SEO_BY_HOME_HASH = {
   [HOME_SECTIONS.events]: {
     title: `Community Events — Learn, Connect & Grow ${titleSuffix}`,
     description:
-      'Upcoming ZEF community events including innovation workshops, digital skills bootcamps, and mentorship circles—online and across our network.',
+      'Community activities from ZEF, including innovation workshops, digital skills bootcamps, and mentorship circles. Listed activities have already taken place.',
   },
 };
 
@@ -197,6 +201,6 @@ export const SITEMAP_PATHS = [
   { path: '/volunteer', changefreq: 'monthly', priority: '0.7' },
   { path: '/partnerships', changefreq: 'monthly', priority: '0.7' },
   { path: '/pilots', changefreq: 'monthly', priority: '0.8' },
-  { path: '/enroll', changefreq: 'monthly', priority: '0.9' },
+  { path: ENROL_PATH, changefreq: 'monthly', priority: '0.9' },
   { path: '/contact', changefreq: 'monthly', priority: '0.8' },
 ];

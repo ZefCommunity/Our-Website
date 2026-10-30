@@ -1,5 +1,11 @@
 ﻿import { lazy, Suspense, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import Layout from './components/Homepage/Layout/Layout';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -12,6 +18,11 @@ import { Analytics } from './lib/analytics';
 import { PageLoadFallback } from './components/shared/PageLoadFallback';
 import NotFound from './Pages/NotFound/NotFound';
 import { APP_LOADER_MAX_MS } from './config/performance';
+import {
+  ENROL_LEGACY_PATH,
+  ENROL_PATH,
+  buildEnrolLocation,
+} from './config/programmeRegistration';
 
 // Route-level code splitting — homepage Layout stays eager for faster LCP
 const About = lazy(() => import('./Pages/About/About'));
@@ -24,6 +35,11 @@ const Volunteer = lazy(() => import('./Pages/Volunteer/Volunteer'));
 const Partnerships = lazy(() => import('./Pages/Partnerships/Partnerships'));
 const Pilots = lazy(() => import('./Pages/Pilots/Pilots'));
 const Enroll = lazy(() => import('./Pages/Enroll/Enroll'));
+
+function LegacyEnrolRedirect() {
+  const { search, hash } = useLocation();
+  return <Navigate to={buildEnrolLocation(search, hash)} replace />;
+}
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -66,7 +82,8 @@ function App() {
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/pilots" element={<Pilots />} />
-          <Route path="/enroll" element={<Enroll />} />
+          <Route path={ENROL_PATH} element={<Enroll />} />
+          <Route path={ENROL_LEGACY_PATH} element={<LegacyEnrolRedirect />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogDetail" element={<BlogDetails />} />

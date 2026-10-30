@@ -13,9 +13,9 @@ function PilotProgramsSection() {
     >
       <SectionHeader
         titleId="pilots-programs-title"
-        eyebrow="The two pilots"
-        title="Choose the path that fits your goals"
-        description="Two focused programs: one for skills and portfolio-building, one for founders seeking funding readiness and peer support."
+        eyebrow="Paths in this programme"
+        title="Two paths, one registration"
+        description="Digital Skills Starter and Mentor Circles sit inside this programme. Register once on the Enrol page."
       />
 
       <div

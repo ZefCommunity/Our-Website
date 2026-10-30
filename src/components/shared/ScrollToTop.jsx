@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 /**
  * Resets window scroll on route changes so short/lazy pages
- * (like /enroll while loading) do not open at the footer.
+ * (like /enrol while loading) do not open at the footer.
  */
 export function ScrollToTop() {
   const { pathname, hash } = useLocation();

@@ -4,3 +4,4 @@ export { default as AudienceSection } from './AudienceSection';
 export { default as PilotProgramsSection } from './PilotProgramsSection';
 export { default as JoinStepsSection } from './JoinStepsSection';
 export { default as InterestFormSection } from './InterestFormSection';
+export { default as RegistrationSection } from './RegistrationSection';

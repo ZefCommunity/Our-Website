@@ -1,13 +1,19 @@
 /** Static copy and structured data for the Pilot Programs page */
 
 import { ZEF_PILOT_APPLICANT_EMAIL } from '../../config/branding';
+import {
+  PROGRAMME_COMMENCEMENT_DATE,
+  PROGRAMME_PATH_TITLES,
+  PROGRAMME_REGISTRATION_DEADLINE,
+} from '../../config/programmeRegistration';
 
 export const PILOTS_PAGE = {
-  eyebrow: 'Pilot Programs',
-  heroTitle: 'Our First Pilot Programs',
+  eyebrow: 'Pilot programme',
+  heroTitle: 'Our Pilot Programme',
   heroSubtitle:
-    'Built from insights gathered from over 520 youth and partner responses, our first pilot programs are designed to help young people and entrepreneurs move from barriers to opportunities.',
-  heroCta: 'Register Your Interest',
+    'Built from insights gathered from over 520 youth and partner responses, this pilot programme is designed to help young people and entrepreneurs move from barriers to opportunities.',
+  heroCta: 'Enrol',
+  registrationNote: `Registration closes on ${PROGRAMME_REGISTRATION_DEADLINE}. The programme commences on ${PROGRAMME_COMMENCEMENT_DATE}. Register on the Enrol page.`,
 };
 
 export const PROMISE_CONTENT = {
@@ -50,7 +56,7 @@ export const PILOT_PROGRAMS = [
   {
     id: 'digital-skills',
     icon: 'laptop',
-    title: 'Digital Skills Starter',
+    title: PROGRAMME_PATH_TITLES[0],
     audience:
       'Students, graduates, freelancers building a portfolio.',
     benefits: ['Graphic Design', 'AI & Data Literacy', 'Leadership'],
@@ -59,7 +65,7 @@ export const PILOT_PROGRAMS = [
   {
     id: 'mentor-circles',
     icon: 'users',
-    title: 'Mentor Circles',
+    title: PROGRAMME_PATH_TITLES[1],
     audience: 'Entrepreneurs and business owners.',
     benefits: [
       'Small circles of 5–6 founders paired with one mentor',
@@ -73,9 +79,8 @@ export const JOIN_STEPS = [
   {
     id: 'apply',
     step: 1,
-    title: 'Fill in the interest form',
-    description:
-      'Tell us which pilot fits you and share your goals so we can match you well.',
+    title: 'Register on the Enrol page',
+    description: `Use the Enrol page to register for this programme, including ${PROGRAMME_PATH_TITLES.join(' and ')}. Registration closes on ${PROGRAMME_REGISTRATION_DEADLINE}.`,
   },
   {
     id: 'follow-up',
@@ -90,14 +95,14 @@ export const JOIN_STEPS = [
     step: 3,
     title: 'Join an orientation session',
     description:
-      'Attend a short orientation for your chosen pilot before the program begins.',
+      `Attend a short orientation for your chosen path before the programme begins on ${PROGRAMME_COMMENCEMENT_DATE}.`,
   },
 ];
 
 export const PILOT_INTEREST_OPTIONS = [
   { value: '', label: 'Select a pilot program' },
-  { value: 'digital-skills', label: 'Digital Skills Starter' },
-  { value: 'mentor-circles', label: 'Mentor Circles' },
+  { value: 'digital-skills', label: PROGRAMME_PATH_TITLES[0] },
+  { value: 'mentor-circles', label: PROGRAMME_PATH_TITLES[1] },
   { value: 'both', label: 'Both / Not sure yet' },
 ];
 
