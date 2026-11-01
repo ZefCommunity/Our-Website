@@ -7,7 +7,6 @@ import {
 export const ENROLL_PAGE = {
   eyebrow: 'Expression of Interest',
   heroTitle: 'Enrolment Is Now Open',
-  heroSubtitle: 'Ready to learn a new skill?',
   heroDescription: `Register here for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}.`,
   heroCta: 'Register Your Interest',
   registrationDeadline: PROGRAMME_REGISTRATION_DEADLINE,
@@ -15,8 +14,8 @@ export const ENROLL_PAGE = {
 };
 
 export const ENROLL_FORM_COPY = {
-  title: 'Register Your Interest',
-  intro: `Register for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}. Share your details and the skills you want to learn. Register by ${PROGRAMME_REGISTRATION_DEADLINE}. The programme commences on ${PROGRAMME_COMMENCEMENT_DATE}.`,
+  title: 'Your details',
+  intro: 'Share your details and the skills you want to learn. Fields marked with * are required.',
   submitLabel: 'Submit Expression of Interest',
   submittingLabel: 'Submitting…',
   consentLabel:

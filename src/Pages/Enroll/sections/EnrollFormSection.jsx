@@ -17,9 +17,7 @@ import {
   FieldGroup,
   FieldLabel,
 } from '@/components/ui/field';
-import { SectionHeader } from '../../../components/Homepage/shared/SectionHeader';
 import { SectionShell } from '../../../components/Homepage/shared/SectionShell';
-import { SECTION_CONTENT_GAP } from '../../../components/Homepage/shared/sectionUi';
 import NotFound from '../../NotFound/NotFound';
 import InternPhoneInput from '../../Volunteer/_components/intern-phone-input';
 import CourseInterestsSelect from '../components/CourseInterestsSelect';
@@ -27,7 +25,6 @@ import EnrollFormSuccess from '../components/EnrollFormSuccess';
 import EnrollLocationFields from '../components/EnrollLocationFields';
 import EnrollSelect from '../components/EnrollSelect';
 import { ENROLL_INPUT, ENROLL_TEXTAREA } from '../components/enrollFormUi';
-import { ProgrammeDates } from '../../../components/programme/ProgrammeDates';
 import { ENROLL_FORM_COPY } from '../enrollContent';
 import { submitEnrollEoi } from '../lib/submitEnrollEoi';
 
@@ -145,26 +142,26 @@ function EnrollFormSection() {
       ariaLabelledby={
         isSuccess ? 'enroll-success-title' : 'enroll-form-title'
       }
-      className="bg-white scroll-mt-24"
-      belowFold
+      className="scroll-mt-24 bg-slate-50"
+      noPadding
     >
       {isSuccess ? (
-        <div className="mx-auto max-w-3xl rounded-2xl border border-green-500/20 bg-gradient-to-br from-green-500/5 via-white to-slate-50 p-8 shadow-xl shadow-slate-200/50 sm:p-10 lg:p-12">
+        <div className="relative z-10 mx-auto -mt-10 mb-16 max-w-3xl rounded-2xl border border-green-500/20 bg-gradient-to-br from-green-500/5 via-white to-slate-50 p-8 shadow-xl shadow-slate-200/60 sm:-mt-12 sm:mb-20 sm:p-10 lg:p-12">
           <EnrollFormSuccess />
         </div>
       ) : (
-        <>
-          <SectionHeader
-            titleId="enroll-form-title"
-            eyebrow="Expression of Interest"
-            title={ENROLL_FORM_COPY.title}
-            description={ENROLL_FORM_COPY.intro}
-          />
-          <ProgrammeDates className="mx-auto mt-8 max-w-3xl" />
-
-          <div
-            className={`mx-auto max-w-3xl rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-8 lg:p-10 ${SECTION_CONTENT_GAP}`}
-          >
+        <div className="relative z-10 mx-auto -mt-10 mb-16 max-w-3xl rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-slate-200/60 sm:-mt-12 sm:mb-20 sm:p-8 lg:p-10">
+          <header className="mb-8 text-left">
+            <h2
+              id="enroll-form-title"
+              className="text-xl font-semibold text-blue-950 sm:text-2xl"
+            >
+              {ENROLL_FORM_COPY.title}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+              {ENROLL_FORM_COPY.intro}
+            </p>
+          </header>
             {isPending ? (
               <div
                 className="flex min-h-64 flex-col items-center justify-center gap-3 text-slate-500"
@@ -540,8 +537,7 @@ function EnrollFormSection() {
             </form>
               </>
             ) : null}
-          </div>
-        </>
+        </div>
       )}
     </SectionShell>
   );
