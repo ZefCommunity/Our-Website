@@ -164,7 +164,7 @@ export const SEO_BY_HOME_HASH = {
   [HOME_SECTIONS.events]: {
     title: `Community Events — Learn, Connect & Grow ${titleSuffix}`,
     description:
-      'Community activities from ZEF, including innovation workshops, digital skills bootcamps, and mentorship circles. Listed activities have already taken place.',
+      'Community activities from ZEF, including innovation workshops, digital skills bootcamps, and mentorship circles on 2nd December, 2026.',
   },
 };
 

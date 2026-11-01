@@ -141,7 +141,8 @@ test('past community event dates are not published', () => {
     assert.doesNotMatch(source, /September, 2026/);
     assert.doesNotMatch(source, /2nd October, 2026/);
   }
-  assert.match(homeEvents, /already taken place/);
+  assert.match(homeEvents, /2nd December, 2026/);
+  assert.doesNotMatch(homeEvents, /already taken place/);
   assert.match(socialEvents, /already taken place/);
 });
 
