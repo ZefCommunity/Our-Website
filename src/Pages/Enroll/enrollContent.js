@@ -7,7 +7,7 @@ import {
 export const ENROLL_PAGE = {
   eyebrow: 'Expression of Interest',
   heroTitle: 'Enrolment Is Now Open',
-  heroDescription: `Register here for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}.`,
+  heroDescription: `Register here for ZEF's Bootcamp programme, including ${PROGRAMME_PATHS_LABEL}.`,
   heroCta: 'Register Your Interest',
   registrationDeadline: PROGRAMME_REGISTRATION_DEADLINE,
   commencementDate: PROGRAMME_COMMENCEMENT_DATE,

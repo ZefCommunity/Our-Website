@@ -9,7 +9,7 @@ export const IMPACT_SUPPORTING_TEXT =
 export const IMPACT_STATS = [
   {
     id: 'volunteers',
-    value: '50+',
+    value: '60+',
     label: 'Volunteers and Contributors',
   },
   {

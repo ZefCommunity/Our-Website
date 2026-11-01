@@ -169,7 +169,8 @@ test('confirmed impact figures stay in place', () => {
     'utf8',
   );
 
-  assert.match(impact, /50\+/);
+  assert.match(impact, /60\+/);
+  assert.doesNotMatch(impact, /50\+/);
   assert.match(impact, /1000\+/);
   assert.match(programs, /enrolled: '120'/);
   assert.match(programs, /capacity: '200'/);
