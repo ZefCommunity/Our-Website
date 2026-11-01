@@ -86,15 +86,6 @@ const Navbar = () => {
           </li>
           <li className="border-t md:border-none">
             <Link
-              to="/pilots"
-              className={NAV_LINK_CLASS}
-              onClick={handleLinkClick}
-            >
-              Pilots
-            </Link>
-          </li>
-          <li className="border-t md:border-none">
-            <Link
               to={homeSectionPath(HOME_SECTIONS.events)}
               className={NAV_LINK_CLASS}
               onClick={handleLinkClick}

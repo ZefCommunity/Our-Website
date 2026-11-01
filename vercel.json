@@ -9,6 +9,16 @@
       "source": "/enroll/",
       "destination": "/enrol",
       "permanent": true
+    },
+    {
+      "source": "/pilots",
+      "destination": "/enrol",
+      "permanent": true
+    },
+    {
+      "source": "/pilots/",
+      "destination": "/enrol",
+      "permanent": true
     }
   ],
   "rewrites": [

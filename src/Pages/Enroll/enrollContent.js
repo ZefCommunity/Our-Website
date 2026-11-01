@@ -1,5 +1,4 @@
 import {
-  PILOTS_PATH,
   PROGRAMME_COMMENCEMENT_DATE,
   PROGRAMME_PATHS_LABEL,
   PROGRAMME_REGISTRATION_DEADLINE,
@@ -9,9 +8,7 @@ export const ENROLL_PAGE = {
   eyebrow: 'Expression of Interest',
   heroTitle: 'Enrolment Is Now Open',
   heroSubtitle: 'Ready to learn a new skill?',
-  heroDescription: `Register here for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}. The same programme is described on the Pilots page.`,
-  detailsPath: PILOTS_PATH,
-  detailsLabel: 'View programme details',
+  heroDescription: `Register here for ZEF's pilot programme, including ${PROGRAMME_PATHS_LABEL}.`,
   heroCta: 'Register Your Interest',
   registrationDeadline: PROGRAMME_REGISTRATION_DEADLINE,
   commencementDate: PROGRAMME_COMMENCEMENT_DATE,

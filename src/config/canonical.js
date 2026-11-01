@@ -20,7 +20,7 @@ export const PRIMARY_CANONICAL_PATHS = {
   volunteer: '/volunteer',
   community: '/socialEvents',
   partnerships: '/partnerships',
-  pilots: '/pilots',
+  pilots: '/enrol',
   enrol: '/enrol',
   contact: '/contact',
 };
@@ -43,6 +43,7 @@ const PATH_ALIAS_TO_CANONICAL = {
   '/socialevents': PRIMARY_CANONICAL_PATHS.community,
   '/blogdetail': '/blogDetail',
   '/enroll': PRIMARY_CANONICAL_PATHS.enrol,
+  '/pilots': PRIMARY_CANONICAL_PATHS.enrol,
 };
 
 /**

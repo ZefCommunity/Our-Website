@@ -1,7 +1,7 @@
 /**
  * Shared facts for the one public programme.
- * /pilots describes it. /enrol is the only public registration form.
- * Path titles match the existing Pilots page. Start time is not published here.
+ * /enrol is the public registration page. /pilots is muted and redirects here.
+ * Path titles match the existing Pilots copy. Start time is not published here.
  */
 
 export const PROGRAMME_COMMENCEMENT_ISO = '2026-12-02';
@@ -18,6 +18,7 @@ export const PROGRAMME_PATH_TITLES = [
 
 export const PROGRAMME_PATHS_LABEL = PROGRAMME_PATH_TITLES.join(' and ');
 
+/** Former public programme page. Redirected to ENROL_PATH. */
 export const PILOTS_PATH = '/pilots';
 
 /** Public enrolment route (British spelling). */

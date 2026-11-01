@@ -9,7 +9,7 @@ import {
 const QUICK_LINKS = [
   { label: "About ZEF", to: "/about" },
   { label: "Our Programs", to: "/LatestCause" },
-  { label: "Pilot Programs", to: "/pilots" },
+  { label: "Enrol", to: "/enrol" },
   { label: "Contact Us", to: "/contact" },
 ];
 

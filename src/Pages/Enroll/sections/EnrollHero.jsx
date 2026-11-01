@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
   CTA_PRIMARY,
   SECTION_CONTAINER,
@@ -36,14 +35,7 @@ function EnrollHero() {
             {ENROLL_PAGE.heroSubtitle}
           </p>
           <p className="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
-            {ENROLL_PAGE.heroDescription}{' '}
-            <Link
-              to={ENROLL_PAGE.detailsPath}
-              className="font-semibold text-green-300 underline decoration-green-400/50 underline-offset-2 hover:text-white"
-            >
-              {ENROLL_PAGE.detailsLabel}
-            </Link>
-            .
+            {ENROLL_PAGE.heroDescription}
           </p>
           <ProgrammeDates tone="dark" className="mx-auto mt-8 max-w-xl" />
           <div className="mt-10">

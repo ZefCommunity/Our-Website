@@ -21,6 +21,7 @@ import { APP_LOADER_MAX_MS } from './config/performance';
 import {
   ENROL_LEGACY_PATH,
   ENROL_PATH,
+  PILOTS_PATH,
   buildEnrolLocation,
 } from './config/programmeRegistration';
 
@@ -33,7 +34,6 @@ const BlogDetails = lazy(() => import('./Pages/BlogDetails/BlogDetails'));
 const Contact = lazy(() => import('./Pages/Contact/Contact'));
 const Volunteer = lazy(() => import('./Pages/Volunteer/Volunteer'));
 const Partnerships = lazy(() => import('./Pages/Partnerships/Partnerships'));
-const Pilots = lazy(() => import('./Pages/Pilots/Pilots'));
 const Enroll = lazy(() => import('./Pages/Enroll/Enroll'));
 
 function LegacyEnrolRedirect() {
@@ -81,9 +81,9 @@ function App() {
           <Route path="/socialEvents" element={<SocialEvents />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/partnerships" element={<Partnerships />} />
-          <Route path="/pilots" element={<Pilots />} />
           <Route path={ENROL_PATH} element={<Enroll />} />
           <Route path={ENROL_LEGACY_PATH} element={<LegacyEnrolRedirect />} />
+          <Route path={PILOTS_PATH} element={<LegacyEnrolRedirect />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogDetail" element={<BlogDetails />} />

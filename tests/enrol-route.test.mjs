@@ -53,6 +53,7 @@ test('public SEO and sitemap use /enrol', () => {
   assert.doesNotMatch(seo, /canonicalPath: '\/enroll'/);
   assert.match(sitemap, /https:\/\/zurfteempowercare\.org\/enrol/);
   assert.doesNotMatch(sitemap, /\/enroll</);
+  assert.doesNotMatch(sitemap, /\/pilots</);
 });
 
 test('Vercel permanently redirects /enroll to /enrol', () => {
@@ -64,6 +65,15 @@ test('Vercel permanently redirects /enroll to /enrol', () => {
   assert.equal(
     vercel.redirects.some(
       (item) => item.source === '/enroll/' && item.permanent === true,
+    ),
+    true,
+  );
+  assert.equal(
+    vercel.redirects.some(
+      (item) =>
+        item.source === '/pilots' &&
+        item.destination === '/enrol' &&
+        item.permanent === true,
     ),
     true,
   );
@@ -81,6 +91,8 @@ test('navigation labels use Enrol and point at /enrol', () => {
   const app = readFileSync(join(root, 'src/App.jsx'), 'utf8');
 
   assert.match(navbar, /Enrol/);
+  assert.doesNotMatch(navbar, /to="\/pilots"/);
+  assert.doesNotMatch(navbar, />\s*Pilots\s*</);
   assert.doesNotMatch(navbar, />\s*Enroll\s*</);
   assert.match(footer, /Enrol/);
   assert.doesNotMatch(footer, />\s*Enroll\s*</);
@@ -121,7 +133,8 @@ test('pilots and enrol describe one programme and one registration form', () => 
   assert.match(programme, /Mentor Circles/);
   assert.match(pilotCopy, /over 520 youth and partner responses/);
   assert.match(enrol, /PROGRAMME_PATHS_LABEL/);
-  assert.match(enrol, /detailsPath: PILOTS_PATH/);
+  assert.doesNotMatch(enrol, /PILOTS_PATH/);
+  assert.equal(getCanonicalRedirectTarget('/pilots'), '/enrol');
   assert.match(pilotWebhook, /PILOT_INTEREST_WEBHOOK_URL/);
   assert.match(pilotWebhook, /pilot: values\.pilotInterest/);
   assert.match(enrolWebhook, /formType: 'enroll_eoi'/);

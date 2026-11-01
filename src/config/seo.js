@@ -93,13 +93,6 @@ export const SEO_BY_PATH = {
     keywords: `nonprofit partnerships Nigeria, corporate social impact, community empowerment partners, ${SITE_KEYWORDS}`,
     ogType: 'website',
   },
-  '/pilots': {
-    canonicalPath: '/pilots',
-    title: `Pilot Programme — ${PROGRAMME_PATHS_LABEL} ${titleSuffix}`,
-    description: `ZEF's pilot programme includes ${PROGRAMME_PATHS_LABEL}. Register by ${PROGRAMME_REGISTRATION_DEADLINE}. The programme commences on ${PROGRAMME_COMMENCEMENT_DATE}. Registration is on the Enrol page.`,
-    keywords: `pilot programme, ${PROGRAMME_PATHS_LABEL}, enrol ZEF, ${SITE_KEYWORDS}`,
-    ogType: 'website',
-  },
   [ENROL_PATH]: {
     canonicalPath: ENROL_PATH,
     title: `Enrol — Register Interest in Digital Skills Training ${titleSuffix}`,
@@ -200,7 +193,6 @@ export const SITEMAP_PATHS = [
   { path: '/socialEvents', changefreq: 'weekly', priority: '0.8' },
   { path: '/volunteer', changefreq: 'monthly', priority: '0.7' },
   { path: '/partnerships', changefreq: 'monthly', priority: '0.7' },
-  { path: '/pilots', changefreq: 'monthly', priority: '0.8' },
   { path: ENROL_PATH, changefreq: 'monthly', priority: '0.9' },
   { path: '/contact', changefreq: 'monthly', priority: '0.8' },
 ];
