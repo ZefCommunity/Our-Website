@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const countriesApi = axios.create({
   baseURL: "https://countriesnow.space/api/v0.1/countries",
-  timeout: 1500,
+  timeout: 20000,
 });
 
 countriesApi.interceptors.response.use(

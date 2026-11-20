@@ -18,6 +18,8 @@ export default function EnrollLocationFields({
   setValue,
   countries,
   countriesByName,
+  countriesLoading = false,
+  countriesUnavailable = false,
   errors,
   disabled = false,
 }) {
@@ -27,6 +29,9 @@ export default function EnrollLocationFields({
     [countries],
   );
   const cityOptions = countriesByName[country]?.cities ?? [];
+  const countryPlaceholder = countriesLoading
+    ? 'Loading countries…'
+    : 'Select a country';
 
   return (
     <>
@@ -39,21 +44,41 @@ export default function EnrollLocationFields({
               <FieldLabel htmlFor="enroll-country">
                 Country <span className="text-red-600">*</span>
               </FieldLabel>
-              <EnrollSelect
-                id="enroll-country"
-                value={field.value}
-                options={countryOptions}
-                placeholder="Select a country"
-                disabled={disabled}
-                invalid={Boolean(fieldState.error)}
-                onChange={(next) => {
-                  field.onChange(next);
-                  setValue('city', '', {
-                    shouldValidate: false,
-                    shouldDirty: true,
-                  });
-                }}
-              />
+              {countriesUnavailable ? (
+                <input
+                  id="enroll-country"
+                  autoComplete="country-name"
+                  placeholder="Type your country"
+                  disabled={disabled}
+                  aria-invalid={Boolean(fieldState.error)}
+                  className={ENROLL_INPUT}
+                  value={field.value}
+                  onChange={(event) => {
+                    field.onChange(event.target.value);
+                    setValue('city', '', {
+                      shouldValidate: false,
+                      shouldDirty: true,
+                    });
+                  }}
+                  onBlur={field.onBlur}
+                />
+              ) : (
+                <EnrollSelect
+                  id="enroll-country"
+                  value={field.value}
+                  options={countryOptions}
+                  placeholder={countryPlaceholder}
+                  disabled={disabled || countriesLoading}
+                  invalid={Boolean(fieldState.error)}
+                  onChange={(next) => {
+                    field.onChange(next);
+                    setValue('city', '', {
+                      shouldValidate: false,
+                      shouldDirty: true,
+                    });
+                  }}
+                />
+              )}
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}
@@ -84,17 +109,35 @@ export default function EnrollLocationFields({
             <FieldLabel htmlFor="enroll-city">
               City <span className="text-red-600">*</span>
             </FieldLabel>
-            <EnrollSelect
-              id="enroll-city"
-              value={field.value}
-              options={cityOptions}
-              placeholder={
-                country ? 'Select a city' : 'Select a country first'
-              }
-              disabled={disabled || !country}
-              invalid={Boolean(fieldState.error)}
-              onChange={field.onChange}
-            />
+            {countriesUnavailable ? (
+              <input
+                id="enroll-city"
+                autoComplete="address-level2"
+                placeholder="Type your city"
+                disabled={disabled}
+                aria-invalid={Boolean(fieldState.error)}
+                className={ENROLL_INPUT}
+                value={field.value}
+                onChange={(event) => field.onChange(event.target.value)}
+                onBlur={field.onBlur}
+              />
+            ) : (
+              <EnrollSelect
+                id="enroll-city"
+                value={field.value}
+                options={cityOptions}
+                placeholder={
+                  countriesLoading
+                    ? 'Loading cities…'
+                    : country
+                      ? 'Select a city'
+                      : 'Select a country first'
+                }
+                disabled={disabled || countriesLoading || !country}
+                invalid={Boolean(fieldState.error)}
+                onChange={field.onChange}
+              />
+            )}
             {fieldState.error && <FieldError errors={[fieldState.error]} />}
           </Field>
         )}

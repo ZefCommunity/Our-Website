@@ -18,7 +18,6 @@ import {
   FieldLabel,
 } from '@/components/ui/field';
 import { SectionShell } from '../../../components/Homepage/shared/SectionShell';
-import NotFound from '../../NotFound/NotFound';
 import InternPhoneInput from '../../Volunteer/_components/intern-phone-input';
 import CourseInterestsSelect from '../components/CourseInterestsSelect';
 import EnrollFormSuccess from '../components/EnrollFormSuccess';
@@ -126,16 +125,6 @@ function EnrollFormSection() {
     }
   };
 
-  if (error) {
-    return (
-      <NotFound
-        code={error?.status || '404'}
-        title="Could not load the page"
-        description="Something went wrong. Please try again later."
-      />
-    );
-  }
-
   return (
     <SectionShell
       id="enroll-form"
@@ -162,19 +151,6 @@ function EnrollFormSection() {
               {ENROLL_FORM_COPY.intro}
             </p>
           </header>
-            {isPending ? (
-              <div
-                className="flex min-h-64 flex-col items-center justify-center gap-3 text-slate-500"
-                role="status"
-                aria-live="polite"
-              >
-                <div className="h-8 w-8 animate-spin rounded-full border-2 border-green-500 border-t-transparent" />
-                <p className="text-sm">Loading form…</p>
-              </div>
-            ) : null}
-
-            {!isPending ? (
-              <>
             {status === 'error' && formError && (
               <div
                 role="alert"
@@ -263,6 +239,8 @@ function EnrollFormSection() {
                   setValue={setValue}
                   countries={data}
                   countriesByName={memoData}
+                  countriesLoading={isPending}
+                  countriesUnavailable={Boolean(error)}
                   errors={errors}
                   disabled={isSubmitting}
                 />
@@ -535,8 +513,6 @@ function EnrollFormSection() {
                   : ENROLL_FORM_COPY.submitLabel}
               </button>
             </form>
-              </>
-            ) : null}
         </div>
       )}
     </SectionShell>
